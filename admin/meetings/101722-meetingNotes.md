@@ -9,7 +9,7 @@ Attendance:
 - [x] Gunwoo Kim (Lead)
 - [x] Abishek Siva (Lead)
 - [x] Maximillian Chen
-- [] Chun Hang Chan
+- [ ] Chun Hang Chan
 - [x] Raymond Umbas
 - [x] Shantelle Serafin
 - [x] Jerry Wang
