@@ -5,7 +5,7 @@
 ### Location: Geisel Library 1st Floor
 
 Attendance: 
-- [] Shubham Kumar (TA)
+- [ ] Shubham Kumar (TA)
 - [x] Gunwoo Kim (Lead)
 - [x] Abishek Siva (Lead)
 - [x] Maximillian Chen
