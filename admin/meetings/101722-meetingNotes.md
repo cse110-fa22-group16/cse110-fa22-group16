@@ -1,8 +1,8 @@
 # Meeting Minutes
 ## Team #16: Githubbies
 ### Weekly Check-In
-### 10/17/22 12:30PM - 1:05PM
-### Location: Geisel Library 1st Floor
+- **10/17/22 12:30PM - 1:05PM**
+- **Location: Geisel Library 1st Floor**
 
 Attendance: 
 - [x] Shubham Kumar (TA)
@@ -51,8 +51,9 @@ Attendance:
 - We need to figure out an additional weekly meeting
   - So we can have one for working and working for check-in discussions
 
-### Next Meeting: Tuesday 10/18/22 1:00 - 3:00pm
-###               at 1st Floor of Giesel Library
-### Topic: Brainstorming Meeting
+### Next Meeting:
+- **Tuesday 10/18/22 1:00 - 3:00pm**
+- **Giesel Library 1st Floor**
+- **Topic: Brainstorming Meeting**
               
 
