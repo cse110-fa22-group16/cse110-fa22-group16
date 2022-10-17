@@ -1,8 +1,8 @@
 # Meeting Minutes
 ## Team #16: Githubbies
 ### Working  Meeting
-### 10/12/22 8:00 - 8:40PM
-### Location: Geisel Library 1st Floor
+- **10/12/22 8:00 - 8:40PM**
+- **Location: Zoom**
 
 Attendance: 
 - [ ] Shubham Kumar (TA)
@@ -42,6 +42,7 @@ Attendance:
   
 - Vote for team Name and Logo in Slack
 
-### Next Meeting: Monday 10/17/22 12:30PM
-###               at 1st Floor of Giesel Library
-### Topic: Weekly Check-In
+### Next Meeting:
+- **Monday 10/17/22 12:30PM**
+- **Giesel Library 1st Floor**
+- **Topic: Weekly Check-In**
