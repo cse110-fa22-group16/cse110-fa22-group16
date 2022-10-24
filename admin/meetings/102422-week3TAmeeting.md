@@ -36,14 +36,13 @@ Attendance:
   - Information Management
   - Only can use HTML, CSS, and Vanilla JS
   - Github must be used to keep track of all documentation/planning
-  - 
+
 # To Do:
 - Pitch: See [here](#Notes)
 - Additional meeting not on weekend
 - Provide document to receive feedbacks
 - That book in the assignment, give some ideas and constrains
 - TA will send a list
-- 
 
 ### Next Meeting:
 - **Tuesday 10/18/22 1:00 - 3:00pm**
