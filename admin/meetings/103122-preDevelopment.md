@@ -73,4 +73,4 @@
   - describe and define other design choices
 
 ### Next Meeting
-10/27/22 2:00PM-3:00PM CSE Basement
+11/01/22 1:00PM-3:00PM Geisel
