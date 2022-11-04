@@ -1,0 +1,136 @@
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* navbar */
+body {
+    background-color: #FCF8E8;
+    /*
+    min-height: 100vh;
+    margin-top: 10rem;
+    */
+}
+
+header {
+    background-color: #ECB390;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    text-align: center;
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 60px;
+}
+
+header .date-today {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    font-size: 3rem;
+    color: #FCF8E8;
+}
+
+header .to-calendar {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #FCF8E8;
+}
+
+header .to-calendar:hover {
+    color: #224B0C;
+}
+
+@media (max-width: 720px) {
+    header .date-today {
+        display: none;
+    }
+}
+
+/* home page*/
+.reflect-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/*finish page*/
+.finish {
+    font-size: 6rem;
+    padding-top: 200px;
+    text-align: center;
+}
+
+/*button*/
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.25rem;
+    background: #ECB390;
+    border-radius: 50px;
+    box-shadow: #c49c83 10px 10px 15px -10px;
+    color: #ffffff;
+    
+    padding: 10px 20px;
+    border: 0;
+
+    cursor: pointer;
+}
+
+button:hover {
+    color: #224b0c;
+    background: #e99b63;
+}
+
+.month-dropdown{
+    
+}
+
+
+/* calendar */
+main {
+    
+    
+    background-color: green;
+    /*top: 80px;
+    min-height: 100vmin;*/
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calendar {
+    
+    /*
+    margin-left: -50%;
+    margin-right: -50%;
+    */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    
+   
+}
