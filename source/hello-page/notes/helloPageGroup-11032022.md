@@ -76,15 +76,18 @@ header .to-calendar {
     top: 28px;
     right: 30px;
     font-size: 2rem;
-}
-
-header a {
     text-decoration: none;
     color: #FCF8E8;
 }
 
-header a:hover {
+header .to-calendar:hover {
     color: #224B0C;
+}
+
+@media (max-width: 720px) {
+    header .date-today {
+        display: none;
+    }
 }
 ```
 
