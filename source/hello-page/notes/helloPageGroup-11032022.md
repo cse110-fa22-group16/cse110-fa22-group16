@@ -1,5 +1,10 @@
 # Hello Page Group Meeting 11032022
 
+### Page Link
+
+Home page: https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/home-page.html
+
+Finish page: https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/finish-page.html
 
 ### Time:
 
