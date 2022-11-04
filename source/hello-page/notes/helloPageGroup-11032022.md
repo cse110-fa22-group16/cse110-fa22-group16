@@ -32,9 +32,9 @@ Finish page: https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/he
 HTML (inside the body):
 ```
     <header>
-        <a href=" "><img src="image/ref.png" alt="Hubby-logo"></a >
+        <a href="home-page.html"><img src="image/ref.png" alt="Reflect-logo"></a>
         <span class="date-today">11/03/2022</span>  <!-- TODO: get today's date on load -->
-        <a href="" class="to-calendar">My Calendar</a >  <!-- TODO: href to calendar page -->
+        <a href="" class="to-calendar">My Calendar</a>  <!-- TODO: href to calendar page -->
     </header>
 ```
 CSS:
