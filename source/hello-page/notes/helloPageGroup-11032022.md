@@ -100,11 +100,11 @@ font-family: 'Josefin Sans', sans-serif;
 
 Button style:
 
-<img src="resource/button-style.png" width="200px">
+<img src="../resource/button-style.png" width="200px">
 
 Button hover style:
 
-<img src="resource/button-hover-style.png" width="200px">
+<img src="../resource/button-hover-style.png" width="200px">
 
 CSS:
 ```
@@ -136,8 +136,8 @@ button:hover {
 
 Home page:
 
-<img src="resource/home-page-1103.png" width="500px">
+<img src="../resource/home-page-1103.png" width="500px">
 
 Finish Page:
 
-<img src="resource/finish-page-1103.jpg" width="500px">
+<img src="../resource/finish-page-1103.jpg" width="500px">
