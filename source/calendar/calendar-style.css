@@ -5,10 +5,6 @@
 /* navbar */
 body {
     background-color: #FCF8E8;
-    /*
-    min-height: 100vh;
-    margin-top: 10rem;
-    */
 }
 
 header {
@@ -99,38 +95,71 @@ button:hover {
     background: #e99b63;
 }
 
-.month-dropdown{
+.month-dropdown {
     
 }
 
 
 /* calendar */
 main {
-    
-    
-    background-color: green;
-    /*top: 80px;
-    min-height: 100vmin;*/
+    background-color: none;
 
-    justify-content: center;
+    display: flex;
     align-items: center;
-    
+    justify-content: center;
+
+    position: relative;
+    height: calc(100vh - 95px);
+    width: auto;
+    top: 80px;
+
+    padding: 0px;
+    margin: 0px;
 }
 
 .calendar {
-    
-    /*
-    margin-left: -50%;
-    margin-right: -50%;
-    */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    
+    background-color: rgb(255, 255, 255);
+
+    text-align: center;
+
+    height: 30vw;
+    width: 30vw;
+
+    padding: 20px;
+    border-radius: 50px;
    
+}
+
+.day-of-week {
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.date-grid > span {
+    display: inline;
+    text-align: center;
+    font-size: larger;
+    padding-top: 40px;
+}
+
+.date-grid {
+    background: none;
+
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.day {
+    height: 100%;
+    width: 100%;
+
+    border-color: rgb(199, 199, 199);
+    border-style: solid;
+    border-width: 1px;
 }
