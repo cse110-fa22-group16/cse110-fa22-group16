@@ -8,96 +8,7 @@ body {
     background-color: #FCF8E8;
 }
 
-header {
-    background-color: #ECB390;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    text-align: center;
-}
-
-header img {
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    height: 60px;
-}
-
-header .date-today {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    font-size: 3rem;
-    color: #FCF8E8;
-}
-
-header .to-calendar {
-    position: absolute;
-    top: 28px;
-    right: 30px;
-    font-size: 2rem;
-    text-decoration: none;
-    color: #FCF8E8;
-}
-
-header .to-calendar:hover {
-    color: #224B0C;
-}
-
-@media (max-width: 720px) {
-    header .date-today {
-        display: none;
-    }
-}
-
-/* home page*/
-/* .reflect-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2.5rem;
-} */
-
-/*finish page*/
-/* .finish {
-    font-size: 6rem;
-    padding-top: 200px;
-    text-align: center;
-} */
-
-/*button*/
-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 1.25rem;
-    background: #ECB390;
-    border-radius: 50px;
-    box-shadow: #c49c83 10px 10px 15px -10px;
-    color: #ffffff;
-    
-    padding: 10px 20px;
-    border: 0;
-
-    cursor: pointer;
-}
-
-button:hover {
-    color: #224b0c;
-    background: #e99b63;
-}
-
-
-/* calendar */
+/* main container */
 main {
     background-color: none;
 
@@ -114,40 +25,53 @@ main {
     margin: 0px;
 }
 
+/* calendar */
 .calendar {
     background-color: rgb(255, 255, 255);
 
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
 
-    height: 40vw;
-    width: 40vw;
+    height: 65vh;
+    width: 60vh;
 
     padding: 20px;
     border-radius: 40px;
 }
 
+.select {
+    font-size: 2rem;
+}
+
 .date-grid {
     background: none;
 
-    height: 90%;
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 8vh 8vh 8vh 8vh 8vh 8vh 8vh;
+    grid-template-rows: 8vh 8vh 8vh 8vh 8vh 8vh 8vh;
 }
 .date-grid > span {
     display: inline;
     text-align: center;
-    font-size: larger;
-    padding-top: 45px;
+    font-size: 3vh;
+    padding-top: 50%;
 }
 
 .day {
     /* TODO: After days in */
-    height: 100%;
-    width: 100%;
 
     border-color: rgb(150, 150, 150);
     border-style: solid;
     border-width: 1px;
+}
+
+.day.today {
+    border-width: 2px;
+    border-color: black;
+}
+
+.day.color {
+
 }

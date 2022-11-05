@@ -14,29 +14,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header, should be consistent with home-page, TBD -->
-    <header>
-        <!-- TODO: Team logo to go back to Home -->
-        <a href="home-page.html"><img src="image/ref.png" alt="Hubby-logo"></a>
-
-        <!-- TODO: get today's date on load in JS -->
-        <span class="date-today">Today's Date</span> 
-
-        <!-- TODO: href -->
-        <a href="home-page.html" class="to-calendar"> Stats/Back To Home </a>  
-
-    </header>
+    <header> <!-- Header, removed for tidiness. --> </header>
+    
+    <!-- Main container for Calendar -->
     <main>
 
+        <!-- Calendar -->
         <div class="calendar">
             <!-- Already has option of "This Month"-->
-            <label for="start" class="select ">Select Month & Year:</label>
+            <label for="start" class="select">Select Month & Year:</label>
             <!-- Start at 2022-01, value = "" for empty inputs -->
             <input type="month" id="start" name="start"
                 min="2022-01" value="">            
             
             <div class="date-grid">
-                <span>Sun</span>
+                <!-- First row used for labeling. -->
+                <span class="today">Sun</span>
                 <span>Mon</span>
                 <span>Tue</span>
                 <span>Wed</span>
@@ -46,17 +39,10 @@
                 
                 <!-- TODO: load grid with JS for dates -->
                 <!-- TODO: depends on how do we plan to load from Storage,
-                we can do clickabel button(link to edit-page) later, this might be easier for JS -->
+                we can do clickable button (link to edit-page) later, this might be easier for JS -->
+                <!-- TODO: the divs are placeholders. Delete all the divs and generate them in JS. -->
                 <div class="day"> </div>
-                <div class="day"> </div>
-                <div class="day"> </div>
-                <div class="day"> </div>
-                <div class="day"> </div>
-                <div class="day"> </div>
-                <div class="day"> </div>
-
-                <div class="day"> </div>
-                <div class="day"> </div>
+                <div class="day today"> </div>
                 <div class="day"> </div>
                 <div class="day"> </div>
                 <div class="day"> </div>
@@ -94,6 +80,15 @@
                 <div class="day"> </div>
                 <div class="day"> </div>
                 <div class="day"> </div>
+
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                
             </div>
             
         </div>
