@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Settings, already consistent with home-page -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,66 +14,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header, should be consistent with home-page, TBD -->
     <header>
+        <!-- TODO: Team logo to go back to Home -->
         <a href="home-page.html"><img src="image/ref.png" alt="Hubby-logo"></a>
-        <span class="date-today">11/03/2022</span>  <!-- TODO: get today's date on load -->
-        <a href="" class="to-calendar">My Calendar</a>  <!-- TODO: href to calendar page -->
+
+        <!-- TODO: get today's date on load in JS -->
+        <span class="date-today">Today's Date</span> 
+
+        <!-- TODO: href -->
+        <a href="home-page.html" class="to-calendar"> Stats/Back To Home </a>  
+
     </header>
     <main>
 
         <div class="calendar">
-            <label for="start">Start month:</label>
+            <!-- Already has option of "This Month"-->
+            <label for="start" class="select ">Select Month & Year:</label>
+            <!-- Start at 2022-01, value = "" for empty inputs -->
             <input type="month" id="start" name="start"
-                min="2020-01" value="">
-
-
-            <!-- two dropdown
-            <select class="month-dropdown">
-                <option value="Select Month">Select</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April ">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select>
-
-            <select class="year-dropdown">
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-            </select> -->
-
-            <!--
-            <div class="day-of-week">
-                <span>Sun</span>
-                <span>Mon</span>
-                <span>Tues</span>
-                <span>Weds</span>
-                <span>Thurs</span>
-                <span>Fri</span>
-                <span>Sat</span>
-            </div>
-            -->
-            
+                min="2022-01" value="">            
             
             <div class="date-grid">
                 <span>Sun</span>
                 <span>Mon</span>
-                <span>Tues</span>
-                <span>Weds</span>
-                <span>Thurs</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
                 <span>Fri</span>
                 <span>Sat</span>
-
+                
+                <!-- TODO: load grid with JS for dates -->
+                <!-- TODO: depends on how do we plan to load from Storage,
+                we can do clickabel button(link to edit-page) later, this might be easier for JS -->
                 <div class="day"> </div>
                 <div class="day"> </div>
                 <div class="day"> </div>
@@ -113,15 +87,22 @@
                 <div class="day"> </div>
                 <div class="day"> </div>
 
-
-
-
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
             </div>
             
         </div>
-    </main>
-    <footer>
 
+    </main>
+
+    <footer>
+    <!-- TBD -->
     </footer>
+
 </body>
 </html>

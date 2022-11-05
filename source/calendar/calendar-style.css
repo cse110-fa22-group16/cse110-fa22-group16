@@ -1,3 +1,4 @@
+/* font */
 * {
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -53,7 +54,7 @@ header .to-calendar:hover {
 }
 
 /* home page*/
-.reflect-img {
+/* .reflect-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -63,14 +64,14 @@ header .to-calendar:hover {
 h2 {
     text-align: center;
     font-size: 2.5rem;
-}
+} */
 
 /*finish page*/
-.finish {
+/* .finish {
     font-size: 6rem;
     padding-top: 200px;
     text-align: center;
-}
+} */
 
 /*button*/
 button {
@@ -93,10 +94,6 @@ button {
 button:hover {
     color: #224b0c;
     background: #e99b63;
-}
-
-.month-dropdown {
-    
 }
 
 
@@ -122,27 +119,11 @@ main {
 
     text-align: center;
 
-    height: 30vw;
-    width: 30vw;
+    height: 40vw;
+    width: 40vw;
 
     padding: 20px;
-    border-radius: 50px;
-   
-}
-
-.day-of-week {
-    background: red;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-
-}
-
-.date-grid > span {
-    display: inline;
-    text-align: center;
-    font-size: larger;
-    padding-top: 40px;
+    border-radius: 40px;
 }
 
 .date-grid {
@@ -152,14 +133,21 @@ main {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.date-grid > span {
+    display: inline;
+    text-align: center;
+    font-size: larger;
+    padding-top: 45px;
 }
 
 .day {
+    /* TODO: After days in */
     height: 100%;
     width: 100%;
 
-    border-color: rgb(199, 199, 199);
+    border-color: rgb(150, 150, 150);
     border-style: solid;
     border-width: 1px;
 }
