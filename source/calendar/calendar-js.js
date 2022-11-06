@@ -5,21 +5,32 @@ function getDaysInMonth(year, month) {
     return new Date(year, month, 0).getDate();
   }
 
-function createGrids(numberDays){
-    
-    const today = new Date().getDate();
-    const target = document.querySelector('.totalDays')
-    console.log(target);
-    for(let i = today; i < numberDays; i++){
+function createGrids(){
+
+
+    const today = new Date();
+    const firstDay = new Date(today.getFullYear(), today.getMonth(), 1).getDay();
+    const numberDays = getDaysInMonth(today.getFullYear(), today.getMonth());
+    console.log(numberDays)
+    //Tues, Monday...
+    const target = document.querySelector('.date-grid')
+
+    //grids before first day of the month
+    for(let i = 0; i < firstDay; i++){
         const grid = document.createElement('div');
         target.appendChild(grid);
-        if(today == i){
+    }
+
+    //grids in the month
+    for(let i = 1; i < numberDays; i++){
+        const grid = document.createElement('div');
+        target.appendChild(grid);
+        
+        if(today.getDate() == i){
             grid.className = 'day today';
         }
-        else{
+        else
             grid.className = 'day';
-        }
-        console.log('hi');
     }
 }
 
@@ -33,5 +44,5 @@ function init(){
 
     console.log(daysInCurrentMonth);
     
-    createGrids(daysInCurrentMonth);
+    createGrids();
 }
