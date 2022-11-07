@@ -1,0 +1,152 @@
+
+/*Edit Page Styles*/
+.edit-box{
+    background-color:#f1de90; /*TODO: Make this the corresponding color to the rating*/
+    border-radius: 25px;
+    width: 70%;
+    height: 600px;
+    margin:auto;
+    display:block;
+   
+    
+}
+
+/*Top of the edit box*/
+.top-bar button{
+    font-size:3rem;
+    margin: 0.5%;
+}
+
+.exit-button{
+    float: left;
+  
+}
+
+.edit-button{
+    float: right;
+}
+
+.update-button{
+    color: black;
+    visibility: hidden;
+}
+/*Body of the edit box*/
+.main-edit{
+    width: 70%;
+    height: 80%;
+    margin:auto;
+    position: relative;
+    display:grid;
+    align-items:right;
+    top : 6%;
+    
+    grid-gap: 0;
+
+}
+
+.main-edit div{
+    text-align:center;
+    font-size: 1.5rem;
+    width: fit-content;
+    align-self: center;
+}
+
+
+
+/*--------------Style from other pages---------------*/
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* navbar */
+body {
+    background-color: #FCF8E8;
+    margin: 100px 0 0 0;
+}
+
+header {
+    background-color: #ECB390;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    text-align: center;
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 60px;
+}
+
+header .date-today {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    font-size: 3rem;
+    color: #FCF8E8;
+}
+
+header .to-calendar {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #FCF8E8;
+}
+
+header .to-calendar:hover {
+    color: #224B0C;
+}
+
+@media (max-width: 720px) {
+    header .date-today {
+        display: none;
+    }
+}
+
+/* home page*/
+.reflect-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/*finish page*/
+.finish {
+    font-size: 6rem;
+    padding-top: 200px;
+    text-align: center;
+}
+
+/*button*/
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.25rem;
+    background: #ECB390;
+    border-radius: 100px;
+    box-shadow: #c49c83 10px 10px 15px -10px;
+    color: #ffffff;
+    
+    padding: 10px 20px;
+    border: 0;
+
+    cursor: pointer;
+}
+
+button:hover {
+    color: #224b0c;
+    background: #e99b63;
+}
