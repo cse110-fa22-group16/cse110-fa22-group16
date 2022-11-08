@@ -5,9 +5,8 @@ Note: "0000-00-00" in this document will represent a date
 - Use: storing each entry as a separate item
 - Format (JSON File):
 - {\
-      "rating":  "1"/"2"/"3"/"4"/"5",\
+      "rating":   "terrible"/"bad"/"neutral"/"good"/"great",\
       "comment": "a bunch of text here",\
-      "done": "true"/"false",\
       "editted":"true"/"false",\
 - }\
 <br><br>
@@ -17,26 +16,20 @@ Note: "0000-00-00" in this document will represent a date
 - Format (returns key):
 - "year-month-date"
 <br><br>
-- Key: "currentDate"
-- Use: Allows each page to get the current date if needed
-- Format (returns key):
-- "year-month-date"
-<br><br>
 - Key: "colors"
 - Use: Convert ratings to corresponding colors
 - Format (JSON File):
 - {\
-        "1": ,\
-        "2": ,\
-        "3": ,\
-        "4": ,\
-        "5": ,\
+        "terrible": ,\
+        "bad": ,\
+        "neutral": ,\
+        "good": ,\
+        "great": ,\
   }
 
 
 Local Storage Flow:
 1) Hello Page:
-    - setItem(currentDate,"0000-00-00") to set the current date
     - User enters their rating/comment
     - A new entry is created and formatted
     - setItem("0000-00-00" , new entry)
