@@ -39,7 +39,7 @@ function createGrids(year, month){
         dayDiv.className = month + "-" + i + "-" + year;
         dayDiv.appendChild(day);
         
-        if(today.getDate() == i && today.getMonth() + 1 == month){
+        if(today.getFullYear() == year && today.getDate() == i && today.getMonth() + 1 == month){
             grid.className = 'day today';
         }
         else
