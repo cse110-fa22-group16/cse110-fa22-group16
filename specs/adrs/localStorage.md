@@ -5,9 +5,8 @@ Note: "0000-00-00" in this document will represent a date
 - Use: storing each entry as a separate item
 - Format (JSON File):
 - {\
-      "rating":  "1"/"2"/"3"/"4"/"5",\
+      "rating":   "terrible"/"bad"/"neutral"/"good"/"great",\
       "comment": "a bunch of text here",\
-      "done": "true"/"false",\
       "editted":"true"/"false",\
 - }\
 <br><br>
@@ -26,11 +25,11 @@ Note: "0000-00-00" in this document will represent a date
 - Use: Convert ratings to corresponding colors
 - Format (JSON File):
 - {\
-        "1": ,\
-        "2": ,\
-        "3": ,\
-        "4": ,\
-        "5": ,\
+        "terrible": ,\
+        "bad": ,\
+        "neutral": ,\
+        "good": ,\
+        "great": ,\
   }
 
 
