@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - calender-JS
   pull_request:
     branches:
       - main
