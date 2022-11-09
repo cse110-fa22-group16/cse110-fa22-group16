@@ -1,4 +1,10 @@
-Local Storage Items:\
+Topic: Local Storage Items\
+Page: All\
+
+Decision: Data will be implemented using localStorage
+- This decision was made to easily use data across all of the pages
+- This will affect how each page reads and writes entries
+
 Note: "0000-00-00" in this document will represent a date
 <br><br>
 - Key: "year-month-date" (0000-00-00) 
