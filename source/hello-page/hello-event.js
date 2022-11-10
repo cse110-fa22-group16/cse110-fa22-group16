@@ -28,7 +28,6 @@ function submitAndStore() {
     let entry = new Object();
     entry.rating = feeling;
     entry.comment = comment;
-    entry.done = true;
     entry.edited = false;
 
     localStorage.setItem(key, JSON.stringify(entry));

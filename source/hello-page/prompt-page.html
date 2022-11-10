@@ -19,33 +19,29 @@
         <a href="" class="to-calendar">my calendar</a>  <!-- TODO: href to calendar page -->
     </header>
     <main>
-        <h1>how are you today?</h1>
+        <h1 class="howFeeling">how are you today?</h1>
         <form>
-            <div>
+            <div class="feelingsChoices">
                 <input type="radio" id="terrible" name="feelings" value="terrible" required>
                 <label for="terrible">terrible</label>
-        
-            <div>
+
                 <input type="radio" id="bad" name="feelings" value="bad" required>
                 <label for="bad">bad</label>
-            </div>
-        
-            <div>
+          
                 <input type="radio" id="neutral" name="feelings" value="neutral" required>
                 <label for="neutral">neutral</label>
-            </div>
-
-            <div>
+            
                 <input type="radio" id="good" name="feelings" value="good" required>
                 <label for="good">good</label>
-            </div>
-
-            <div>
+            
                 <input type="radio" id="great" name="feelings" value="great" required>
                 <label for="great">great</label>
             </div><br>
 
-            <textarea name="comment" cols="30" rows="2" placeholder="add a comment..."></textarea><br>
+            <p class="getComment">
+                <label for="askComment" id="askComment">add a comment</label>
+                <textarea name="comment" placeholder="I'm doing great because ..."></textarea><br>
+            </p>
 
             <button id="submit-feeling" type="submit">finish</button>
         </form>
