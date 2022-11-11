@@ -29,8 +29,8 @@ header .date-today {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20px;
-    font-size: 3rem;
+    padding-top: 30px;
+    font-size: 2rem;
     color: #000000;
 }
 
@@ -58,7 +58,7 @@ header .to-calendar:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 55%;
 }
 
 h2 {
@@ -114,15 +114,16 @@ input[type=radio] {
 
 label {
     display: block;
-    width: 60px;
+    width: 80px;
     text-align: center;
+    font-size: 1.4rem;
 }
 
 input + label{
     display: inline-block;
     border-radius: 10px;
 
-    padding: 40px 30px;
+    padding: 50px 30px;
     border: 0;
 
     cursor: pointer;
@@ -158,22 +159,12 @@ input + label{
     color: #000000;
 }
 
-#askComment {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 190px;
-    font-size: 1.5rem;
-}
-
-.getComment {
-    text-align: center;
-}
-
 textarea {
     display: block;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     width: 500px;
     height: 70px;
     background: #F4D77266;
@@ -181,4 +172,5 @@ textarea {
     border-radius: 10px;
     resize: none;
     font-size: 1.5rem;
+    padding: 0.7rem;
 }
