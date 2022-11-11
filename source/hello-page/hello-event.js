@@ -16,6 +16,11 @@ if (goButton != null) {
     goButton.addEventListener("click", checkAndGo);
 }
 
+let headerDate = document.querySelector('header>span');
+if (headerDate != null) {
+    headerDate.textContent = `${month}/${date}/${year}`;
+}
+
 /**
  * handle the prompt page form submission and store the information 
  * as an entry with date as key in localStorage
