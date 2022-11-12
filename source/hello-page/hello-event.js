@@ -36,8 +36,6 @@ function submitAndStore() {
     entry.edited = false;
 
     localStorage.setItem(key, JSON.stringify(entry));
-
-    location.href = "finish-page.html";
 }
 
 function checkAndGo() {
