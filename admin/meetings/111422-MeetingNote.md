@@ -25,7 +25,7 @@
 - How to manage the github issues and documents.
 - CI/CD pipeline 
 
-### Achieved
+### Retrospective Review
 
 - ADRs template done.
 - Template of Github issues.
@@ -35,6 +35,8 @@
     - HTML and Javascript of the front page.
     - Fixed the bugs.
     - Have the localStorage done.
+
+- Assign different works for everyone.
     
 ### TODO
 - Add week time and team labels in Github issues.
@@ -42,4 +44,11 @@
 - Keep working on the pages frontend and backend.
 - Having Unit tests for everything.
 - Have every page with basic funtionalities by the next week.
-- Assign different works for everyone.
+- Make sure everyone is doing work.
+
+- End to end testing? Let Max join some group for now, because end to end testing is hard.
+
+
+
+
+
