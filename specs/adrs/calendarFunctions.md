@@ -33,6 +33,11 @@ We were discussing what are the essential components for the calendar page and i
   * clickable date link to **edit** page
   * be simple and consise
 
+* structure
+  * simple and consistent
+  * avoid `divs` for unlimited times
+  * follow: main: calendar: dropdown, grid, link, xxx, ...;
+  
 ## Decision Outcome
 
 All of the above.
