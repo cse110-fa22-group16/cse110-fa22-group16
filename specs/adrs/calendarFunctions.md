@@ -24,17 +24,30 @@ We were discussing what are the essential components for the calendar page and i
   * start at 2022, no need for previous years
 
 * calendar grid display
-  * 7*7: 1*7 for weekday names, 6*7 for actual month date
-  * app descriptor
-  * "let's go" button
+  * 7x7: 1x7 for weekday names, 6x7 for actual month date
+  * should be fit by window size
+  * (may offer stats page if available)
+
+* editable date in the grid to edit entries
+  * only can edit the date if you did the entry: no clickable if this date is blank
+  * clickable date link to **edit** page
+  * be simple and consise
 
 ## Decision Outcome
 
 All of the above.
+Stats page TBD
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### Cons: {unlimited character comment box}
+### Pros:
+* not hard to link with **edit** page
+* easy to merge up with other branches
+* ...
+
+### Cons:
 * potentially a lot of data to store
+* data in the grid might be messy
+* ...
 
 <!-- markdownlint-disable-file MD013 -->
