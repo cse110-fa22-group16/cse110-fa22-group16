@@ -6,7 +6,7 @@
 
 ## Context and Problem Statement
 
-We were discussing what are the essential components for the edit page and its functionality.
+We were discussing what are the essential components for the edit page and its functionalities.
 
 ## Decision Drivers <!-- optional -->
 
