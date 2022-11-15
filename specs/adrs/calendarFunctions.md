@@ -38,6 +38,10 @@ We were discussing what are the essential components for the calendar page and i
   * avoid `divs` for unlimited times
   * follow: main: calendar: dropdown, grid, link, xxx, ...;
   
+* flow
+  * if click **My Calendar**, go to calendar
+  * Click any clickable date in the grid, go to edit to change entries'
+  * Click **Back** back to home page
 ## Decision Outcome
 
 All of the above.
