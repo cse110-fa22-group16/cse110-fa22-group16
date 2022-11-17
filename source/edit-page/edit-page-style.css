@@ -3,8 +3,8 @@
 .edit-box{
     background-color:#f1de90; /*TODO: Make this the corresponding color to the rating*/
     border-radius: 25px;
-    width: 70%;
-    height: 600px;
+    width: 70vw;
+    height: 40vw;
     margin:auto;
    display: flex;
    flex-direction: column;
@@ -13,7 +13,7 @@
 
 /*Top of the edit box*/
 #topBar button{
-    font-size:4vw;
+    font-size:2vw;
     margin: 0.5vw;
 }
 
@@ -23,8 +23,8 @@
 }
 
 #updateButton{
-    font-size:4vw;
-    height: 6vw;
+    font-size:2vw;
+    height: 4vw;
     visibility: hidden;
     margin:auto;
 }
