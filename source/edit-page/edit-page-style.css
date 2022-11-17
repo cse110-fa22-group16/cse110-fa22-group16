@@ -13,7 +13,7 @@
 
 /*Top of the edit box*/
 .top-bar button{
-    font-size:3rem;
+    font-size:1.5rem;
     margin: 0.5%;
 }
 
@@ -27,31 +27,57 @@
 }
 
 .update-button{
-    color: black;
+    height: 3rem;
     visibility: hidden;
 }
+
 /*Body of the edit box*/
 .main-edit{
     width: 70%;
     height: 80%;
-    margin:auto;
-    position: relative;
-    display:grid;
-    align-items:right;
-    top : 6%;
-    
-    grid-gap: 0;
+    margin-left: auto;
+    margin-right:auto;
 
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
 }
 
 .main-edit div{
     text-align:center;
     font-size: 1.5rem;
     width: fit-content;
-    align-self: center;
+
+   
 }
 
+/*Rating*/
+#ratingRead{
+    display: inline;
+}
+#ratingEdit{
+    display: none;
+}
 
+/*Comment*/
+#commentRead{
+    display: inline;
+}
+#commentEdit{
+    display: none;
+}
+
+/*Edit Mode*/
+.main-edit textarea{
+    min-width: 50vw;
+}
+
+.main-edit select{
+    font-size: 2rem;
+}
 
 /*--------------Style from other pages---------------*/
 * {

@@ -27,12 +27,29 @@
             <button class="exit-button" type="button">X</button>
             <button class="edit-button" type="button">Edit</button>
         </div>
-        <div class = "main-edit">
-            <div id = "date">Date: 11/7/22</div >
-            <div  id = "rating">
 
+        <div class = "main-edit">
+    
+            <div id = "date">
+                Date : 11/7/22
+            </div>
+
+            <div id = "rating">
+                Rating: <span id = "ratingRead"></span>
+                <select name="ratings" id="ratingEdit" >
+                    <option value="Terrible">Terrible</option>
+                    <option value="Bad">Bad</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Good">Good</option>
+                    <option value="Great">Great</option>
+                </select>
             </div >
-            <div  id = "comment"></div >
+
+            <div id = "comment">
+                Comment:<br>  
+                <span id = "commentRead"></span>
+                <textarea id = "commentEdit"></textarea>
+            </div >
             <button class = "update-button" type = "button" >Update</button>
         </div>
         
