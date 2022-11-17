@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Settings, already consistent with home-page -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,58 +14,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="home-page.html"><img src="image/ref.png" alt="Hubby-logo"></a>
-        <span class="date-today">11/03/2022</span>  <!-- TODO: get today's date on load -->
-        <a href="" class="to-calendar">My Calendar</a>  <!-- TODO: href to calendar page -->
-    </header>
+    <header> <!-- Header, removed for tidiness. --> </header>
+    
+    <!-- Main container for Calendar -->
     <main>
 
+        <!-- Calendar -->
         <div class="calendar">
-            <label for="start">Start month:</label>
+            <!-- Already has option of "This Month"-->
+            <label for="start" class="select">Select Month & Year:</label>
+            <!-- Start at 2022-01, value = "" for empty inputs -->
             <input type="month" id="start" name="start"
-                min="2020-01" value="">
+                min="2022-01" value="">            
+            
+            <div class="date-grid">
+                <!-- First row used for labeling. -->
+                <span class="today">Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
 
-            <!-- two dropdown
-            <select class="month-dropdown">
-                <option value="Select Month">Select</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April ">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select>
-
-            <select class="year-dropdown">
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-            </select> -->
-
-            <div class="day-of-week"></div>
-            <div class="date-grid"></div>
-
-            <style>
-                body, .calendar {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            </style>
+                
+                <!-- TODO: load grid with JS for dates -->
+                <!-- TODO: depends on how do we plan to load from Storage,
+                we can do clickable button (link to edit-page) later, this might be easier for JS -->
+                <!-- TODO: the divs are placeholders. Delete all the divs and generate them in JS. -->
+    
+            </div>
             
         </div>
-    </main>
-    <footer>
 
+    </main>
+
+    <footer>
+    <!-- TBD -->
     </footer>
+
+    <script src="calendar-js.js"></script>
 </body>
 </html>
