@@ -26,8 +26,8 @@ const ratingRead = document.querySelector("#ratingRead");
 const ratingEdit = document.querySelector("#ratingEdit");
 const commentRead = document.querySelector("#commentRead");
 const commentEdit = document.querySelector("#commentEdit");
-const updateButton = document.querySelector(".update-button");
-const editButton = document.querySelector(".edit-button");
+const updateButton = document.querySelector("#updateButton");
+const editButton = document.querySelector("#editButton");
 
 editButton.addEventListener("click", function(){
 
@@ -38,7 +38,7 @@ editButton.addEventListener("click", function(){
         mode = "edit";
 
         //Change Buttons
-        editButton.innerHTML = "Delete";                                         //Turn edit button into delete
+        editButton.innerHTML = "Delete";            //Turn edit button into delete
         updateButton.style.visibility = "visible";  //Show update button
         
         //TODO: Make the initially selected value to be the current rating
@@ -64,7 +64,7 @@ editButton.addEventListener("click", function(){
 
 //In edit mode (that's the only time update is visible)
 //Edit Mode -> Read Mode
-const pressUpdate = document.querySelector(".update-button");
+const pressUpdate = document.querySelector("#updateButton");
 pressUpdate.addEventListener("click", function(){
 
     //TODO: Get values from select/textarea and update data
