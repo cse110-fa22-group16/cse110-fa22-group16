@@ -46,11 +46,13 @@ editButton.addEventListener("click", function(){
         //Make inputs editable
         //Turn rating into a select element
         ratingRead.style.display = "none";
+        ratingEdit.value = currentRating;
         ratingEdit.style.display = "inline";
         
         //Turn comment into a textarea
         commentRead.style.display = "none";
         commentEdit.style.display = "inline";
+        commentEdit.value = currentComment;
     }
 
     //In edit mode
