@@ -23,13 +23,14 @@
 
     <!-- Entry Edit Page -->
     <div class = "edit-box">
-        <div class = "top-bar" style = "clear: both">
-            <button class="exit-button" type="button">X</button>
-            <button class="edit-button" type="button">Edit</button>
+        <div id = "topBar">
+            <div><button id="exitButton" type="button">X</button></div>
+            <div><button id="editButton" type="button">Edit</button></div>
+
         </div>
 
-        <div class = "main-edit">
-    
+        <div id = "mainEdit">
+
             <div id = "date">
                 Date : 11/7/22
             </div>
@@ -48,11 +49,12 @@
             <div id = "comment">
                 Comment:<br>  
                 <span id = "commentRead"></span>
+                <label for="commendEdit"></label>
                 <textarea id = "commentEdit"></textarea>
             </div >
-            <button class = "update-button" type = "button" >Update</button>
+            
         </div>
-        
+        <button id = "updateButton" type = "button" >Update</button>
     </div>
     
 </body>
