@@ -21,6 +21,7 @@ We were discussing the functionality that can lead to edit-entry page
   * simple and consistent
   * avoid bugs
   * this variable can direct to the month when we go back to the calendar from edit page
+  * Set `currentState` back to null when we enter the calendar, so that null means we just display the current present month.
 
 ## Decision Outcome
 
