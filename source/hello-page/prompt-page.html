@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="hello-style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1 class="howFeeling">how are you today?</h1>
+        <form action="finish-page.html" id="prompt-form">
+            <div class="feelingsChoices">
+                <input type="radio" id="terrible" name="feelings" value="terrible" required>
+                <label for="terrible">terrible</label>
+
+                <input type="radio" id="bad" name="feelings" value="bad" required>
+                <label for="bad">bad</label>
+          
+                <input type="radio" id="neutral" name="feelings" value="neutral" required>
+                <label for="neutral">neutral</label>
+            
+                <input type="radio" id="good" name="feelings" value="good" required>
+                <label for="good">good</label>
+            
+                <input type="radio" id="great" name="feelings" value="great" required>
+                <label for="great">great</label>
+            </div><br>
+
+            <textarea name="comment" placeholder="add a comment ..."></textarea><br>
+
+            <button id="submit-feeling" type="submit">finish</button>
+        </form>
+    </main>
+    <footer></footer>
+    
+    <script src="add-navbar.js"></script>
+    <script src="hello-event.js"></script>
+</body>
+</html>
