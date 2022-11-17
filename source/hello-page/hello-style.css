@@ -174,3 +174,7 @@ textarea {
     font-size: 1.5rem;
     padding: 0.7rem;
 }
+
+.feelingsChoices input[type='radio']:checked+label {
+    border: 3px solid #000000;
+}
