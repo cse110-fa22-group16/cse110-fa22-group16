@@ -69,8 +69,6 @@ editButton.addEventListener("click", function(){
 const pressUpdate = document.querySelector("#updateButton");
 pressUpdate.addEventListener("click", function(){
 
-    //TODO: Get values from select/textarea and update data
-
     //Return to read only mode
     mode = "read";
 
@@ -86,5 +84,13 @@ pressUpdate.addEventListener("click", function(){
     //Remove comment textarea
     commentRead.style.display = "inline";
     commentEdit.style.display = "none";
+
+    //TODO: Change this to updating localStorage
+    currentRating = ratingEdit.value;
+    currentComment = commentEdit.value;
+
+    //TODO: Change this to reading values from localStorage
+    ratingRead.innerHTML = currentRating;
+    commentRead.innerHTML = currentComment;
 
 });
