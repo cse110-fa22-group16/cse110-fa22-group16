@@ -2,12 +2,31 @@ window.addEventListener('DOMContentLoaded', init);
 
 let currentComment = ""
 let currentRating = ""
+let colorDict = {
+    "Terrible" : "#8E6E5E",
+    "Bad" : "#586689",
+    "Neutral" : "#F9DEC9",
+    "Good" : "#339989",
+    "Great" : "#D7B4F3"
+}
+
+//Button and Datafield constants for reference
+const ratingRead = document.querySelector("#ratingRead");
+const ratingEdit = document.querySelector("#ratingEdit");
+const commentRead = document.querySelector("#commentRead");
+const commentEdit = document.querySelector("#commentEdit");
+const updateButton = document.querySelector("#updateButton");
+const editButton = document.querySelector("#editButton");
+const editBox = document.querySelector(".edit-box");
+const mainEdit = document.querySelector("#mainEdit");
+
 function init() {
     //toggle between read-only and edit mode
     mode = "read"; 
     
     //FOR TESTING ONLY (TODO: implement the actually data instead of this)
     currentRating = "Good";
+    editBox.style.backgroundColor = colorDict[currentRating];
     currentComment = "Today was a good day :)";
 
     const rating = document.querySelector("#ratingRead");
@@ -21,13 +40,10 @@ function init() {
 
 init();
 
-//Button and Datafield constants for reference
-const ratingRead = document.querySelector("#ratingRead");
-const ratingEdit = document.querySelector("#ratingEdit");
-const commentRead = document.querySelector("#commentRead");
-const commentEdit = document.querySelector("#commentEdit");
-const updateButton = document.querySelector("#updateButton");
-const editButton = document.querySelector("#editButton");
+ratingEdit.addEventListener("change", function(){
+    currentRating = ratingEdit.value;
+    editBox.style.backgroundColor = colorDict[currentRating];
+});
 
 editButton.addEventListener("click", function(){
 
