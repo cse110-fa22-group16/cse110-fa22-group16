@@ -1,0 +1,170 @@
+
+/*Edit Page Styles*/
+.edit-box{
+    background-color:#f1de90; /*TODO: Make this the corresponding color to the rating*/
+    border-radius: 25px;
+    width: 70vw;
+    height: 40vw;
+    margin:auto;
+   display: flex;
+   flex-direction: column;
+       
+}
+
+/*Top of the edit box*/
+#topBar button{
+    font-size:2vw;
+    margin: 0.5vw;
+}
+
+#topBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#updateButton{
+    font-size:2vw;
+    height: 4vw;
+    visibility: hidden;
+    margin:auto;
+}
+
+/*Body of the edit box*/
+#mainEdit{
+    margin : auto;
+    font-size: 3vw;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    gap: 3vw;
+
+    
+}
+
+
+
+/*Rating*/
+#ratingRead{
+    display: inline;
+}
+#ratingEdit{
+    display: none;
+    font-size: 1.5vw;
+}
+
+/*Comment*/
+#comment{
+    margin-top: 2vw;
+    font-size: 2vw;
+    display: flex;
+    flex-direction:column;
+    align-self: flex-start;
+
+}
+#commentRead{
+    display: inline;
+    width: 50vw;
+    height: 10vw;
+
+}
+#commentEdit{
+    display: none;
+    width: 50vw;
+    height: 10vw;
+    font-size: 2vw;
+}
+
+/*--------------Style from other pages---------------*/
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* navbar */
+body {
+    background-color: #FCF8E8;
+    margin: 100px 0 0 0;
+}
+
+header {
+    background-color: #ECB390;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    text-align: center;
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 60px;
+}
+
+header .date-today {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    font-size: 3rem;
+    color: #FCF8E8;
+}
+
+header .to-calendar {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #FCF8E8;
+}
+
+header .to-calendar:hover {
+    color: #224B0C;
+}
+
+@media (max-width: 720px) {
+    header .date-today {
+        display: none;
+    }
+}
+
+/* home page*/
+.reflect-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+/*button*/
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1.25rem;
+    background: #ECB390;
+    border-radius: 100px;
+    box-shadow: #c49c83 10px 10px 15px -10px;
+    color: #ffffff;
+    
+    padding: 10px 20px;
+    border: 0;
+
+    cursor: pointer;
+}
+
+button:hover {
+    color: #224b0c;
+    background: #e99b63;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Edit</title>
+
+    <link rel="stylesheet" href="edit-page-style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <a href=" "><img src="image/ref.png" alt="Hubby-logo"></a >
+        <span class="date-today">11/03/2022</span>  <!-- TODO: get today's date on load -->
+        <a href="" class="to-calendar">My Calendar</a >  <!-- TODO: href to calendar page -->
+    </header>
+
+    <!-- Entry Edit Page -->
+    <div class = "edit-box">
+        <div id = "topBar">
+            <div><button id="exitButton" type="button">X</button></div>
+            <div><button id="editButton" type="button">Edit</button></div>
+
+        </div>
+
+        <div id = "mainEdit">
+
+            <div id = "date">
+                Date : 11/7/22
+            </div>
+
+            <div id = "rating">
+                Rating: <span id = "ratingRead"></span>
+                <select name="ratings" id="ratingEdit" >
+                    <option value="Terrible">Terrible</option>
+                    <option value="Bad">Bad</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Good">Good</option>
+                    <option value="Great">Great</option>
+                </select>
+            </div >
+
+            <div id = "comment">
+                Comment:<br>  
+                <span id = "commentRead"></span>
+                <label for="commendEdit"></label>
+                <textarea id = "commentEdit"></textarea>
+            </div >
+            
+        </div>
+        <button id = "updateButton" type = "button" >Update</button>
+    </div>
+    
+</body>
+</html>
+
+<script src="edit-page.js"></script>
