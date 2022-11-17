@@ -10,21 +10,27 @@ function init() {
     currentRating = "Good";
     currentComment = "Today was a good day :)";
 
-    const rating = document.querySelector("#rating");
-    rating.innerHTML = "Rating: " + currentRating;
+    const rating = document.querySelector("#ratingRead");
+    rating.innerHTML = currentRating;
 
-    const comment = document.querySelector("#comment");
-    comment.innerHTML = "Comment: " + currentComment;
+    const comment = document.querySelector("#commentRead");
+    comment.innerHTML = currentComment;
 
     
 }
 
 init();
 
-
+//Button and Datafield constants for reference
+const ratingRead = document.querySelector("#ratingRead");
+const ratingEdit = document.querySelector("#ratingEdit");
+const commentRead = document.querySelector("#commentRead");
+const commentEdit = document.querySelector("#commentEdit");
 const updateButton = document.querySelector(".update-button");
 const editButton = document.querySelector(".edit-button");
+
 editButton.addEventListener("click", function(){
+
     //Button pressed during the default "read only" mode
     //Read Mode -> Edit Mode
     if(mode == "read"){
@@ -36,23 +42,15 @@ editButton.addEventListener("click", function(){
         updateButton.style.visibility = "visible";  //Show update button
         
         //TODO: Make the initially selected value to be the current rating
+
         //Make inputs editable
         //Turn rating into a select element
-        const ratingSelect =
-            `<label for="ratings">Rating:</label>
-            <select name="ratings" id="ratings" >`
-            +
-                `<option value="Terrible">Terrible</option>
-                <option value="Bad">Bad</option>
-                <option value="Neutral">Neutral</option>
-                <option value="Good">Good</option>
-                <option value="Great">Great</option>
-            </select>`
-        rating.innerHTML = ratingSelect;
-        rating.value = currentRating;
+        ratingRead.style.display = "none";
+        ratingEdit.style.display = "inline";
+        
         //Turn comment into a textarea
-        const commentTextArea = "Comment:<br> <textarea class = `commentBox`>"+currentComment+"</textarea>"
-        comment.innerHTML = commentTextArea;
+        commentRead.style.display = "none";
+        commentEdit.style.display = "inline";
     }
 
     //In edit mode
@@ -65,17 +63,26 @@ editButton.addEventListener("click", function(){
 });
 
 //In edit mode (that's the only time update is visible)
+//Edit Mode -> Read Mode
 const pressUpdate = document.querySelector(".update-button");
 pressUpdate.addEventListener("click", function(){
 
     //TODO: Get values from select/textarea and update data
-    const commentBox = document.querySelector(".commentBox");
-   
+
     //Return to read only mode
     mode = "read";
+
+    //Update Buttons
     editButton.innerHTML = "Edit";
     updateButton.style.visibility = "hidden";
-    rating.innerHTML = currentRating;
-    comment.innerHTML = currentComment;
+
+    //Make data read only
+    //Remove rating select element
+    ratingRead.style.display = "inline";
+    ratingEdit.style.display = "none";
+    
+    //Remove comment textarea
+    commentRead.style.display = "inline";
+    commentEdit.style.display = "none";
 
 });
