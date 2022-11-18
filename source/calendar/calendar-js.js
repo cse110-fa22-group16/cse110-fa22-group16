@@ -31,20 +31,32 @@ function createGrids(year, month){
 
     //grids in the month
     for(let i = 1; i <= numberDays; i++){
-        const grid = document.createElement('div');
+        const dayElement = document.createElement('div');
         const dayDiv = document.createElement('div');
         const day = document.createTextNode(i);
-        target.appendChild(grid);
-        grid.appendChild(dayDiv);
+        target.appendChild(dayElement);
+        dayElement.appendChild(dayDiv);
         dayDiv.className = month + "-" + i + "-" + year;
         dayDiv.appendChild(day);
         
         if(today.getFullYear() == year && today.getDate() == i && today.getMonth() + 1 == month){
-            grid.className = 'day today';
+            dayElement.className = 'day today';
         }
         else
-            grid.className = 'day';
+            dayElement.className = 'day';
+    
+        
+        if(localStorage.getItem(`${year}-${month}-${i}`) != null){
+            dayElement.setAttribute('onclick', `changePage("${year}-${month}-${i}")`);
+        }
     }
+}
+
+function changePage(date){
+    //current date
+    //alert(date);
+    localStorage.setItem("currentState", date);
+    location.replace('/source/edit-page/edit-page.html');
 }
 
 //delete the whole grids for refreshing purpose.
@@ -68,7 +80,6 @@ function init(){
     test.addEventListener('change', ()=>{
         deleteGrids(); //refresh the calender before generating.
         const st = test.value.split("-");   
-        console.log(st[0] - 0, st[1] - 0);
         createGrids(st[0] - 0, st[1] - 0);
     });
 
