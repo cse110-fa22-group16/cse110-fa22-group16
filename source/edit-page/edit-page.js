@@ -1,16 +1,13 @@
 window.addEventListener('DOMContentLoaded', init);
 
-let currentComment = ""
-let currentRating = ""
-let colorDict = {
-    "Terrible" : "#8E6E5E",
-    "Bad" : "#586689",
-    "Neutral" : "#F9DEC9",
-    "Good" : "#339989",
-    "Great" : "#D7B4F3"
-}
+//Variables for entry data
+let currentState = "";
+let entry = {};
 
-//Button and Datafield constants for reference
+//Color Dictionary
+let colors = {};
+
+//Button and Datafield constants for element reference
 const ratingRead = document.querySelector("#ratingRead");
 const ratingEdit = document.querySelector("#ratingEdit");
 const commentRead = document.querySelector("#commentRead");
@@ -21,32 +18,58 @@ const editBox = document.querySelector(".edit-box");
 const mainEdit = document.querySelector("#mainEdit");
 
 function init() {
+    //----------------------------------------------------------------
+    //FOR TESTING ONLY - REMOVE AFTER MERGE WITH OTHER PAGES
+    //Mimic the setup other pages will do before getting to edit
+
+    //Hello Page
+    let colorDictTest = {
+        "terrible" : "#8E6E5E",
+        "bad" : "#586689",
+        "neutral" : "#F9DEC9",
+        "good" : "#339989",
+        "great" : "#D7B4F3"
+    }
+    window.localStorage.setItem("colors", JSON.stringify(colorDictTest));
+
+    let newEntry = {
+        "rating" : "good",
+        "comment" : "Today was a good day :)",
+        "edited" : false
+    }
+    window.localStorage.setItem("0000-00-00", JSON.stringify(newEntry));
+
+    //Calendar Page
+    window.localStorage.setItem("currentState", "0000-00-00");
+    //-----------------------------------------------------------------
+
+
     //toggle between read-only and edit mode
     mode = "read"; 
     
-    //FOR TESTING ONLY (TODO: implement the actually data instead of this)
-    currentRating = "Good";
-    editBox.style.backgroundColor = colorDict[currentRating];
-    currentComment = "Today was a good day :)";
+    //get the selected date and it's entry
+    currentState = window.localStorage.getItem("currentState"); //year-month-day
+    entry = JSON.parse(window.localStorage.getItem(currentState)); //{"rating": , "comment": , "editted": }
 
+    //setup the color dictionary
+    colors = JSON.parse(window.localStorage.getItem("colors"));
+    editBox.style.backgroundColor = colors[entry["rating"]];
+
+    //setup starting value display
     const rating = document.querySelector("#ratingRead");
-    rating.innerHTML = currentRating;
-
+    rating.innerHTML = entry["rating"];
     const comment = document.querySelector("#commentRead");
-    comment.innerHTML = currentComment;
+    comment.innerHTML = entry["comment"];
+    const date = document.querySelector("#date");
+    date.innerHTML = "date : " + currentState.split("").reverse().join("") ;
 
     
 }
 
 init();
 
-ratingEdit.addEventListener("change", function(){
-    currentRating = ratingEdit.value;
-    editBox.style.backgroundColor = colorDict[currentRating];
-});
-
+//Edit Button / delete button (depends on mode)
 editButton.addEventListener("click", function(){
-
     //Button pressed during the default "read only" mode
     //Read Mode -> Edit Mode
     if(mode == "read"){
@@ -57,18 +80,16 @@ editButton.addEventListener("click", function(){
         editButton.innerHTML = "Delete";            //Turn edit button into delete
         updateButton.style.visibility = "visible";  //Show update button
         
-        //TODO: Make the initially selected value to be the current rating
-
         //Make inputs editable
         //Turn rating into a select element
         ratingRead.style.display = "none";
-        ratingEdit.value = currentRating;
+        ratingEdit.value = entry["rating"];
         ratingEdit.style.display = "inline";
         
         //Turn comment into a textarea
         commentRead.style.display = "none";
         commentEdit.style.display = "inline";
-        commentEdit.value = currentComment;
+        commentEdit.value = entry["comment"];
     }
 
     //In edit mode
@@ -78,6 +99,12 @@ editButton.addEventListener("click", function(){
         mode = "read"; //go back to defualt
         
     }
+});
+
+//During edit mode, change background color as rating is selected
+ratingEdit.addEventListener("change", function(){
+    entry["rating"] = ratingEdit.value;
+    editBox.style.backgroundColor = colors[entry["rating"]];
 });
 
 //In edit mode (that's the only time update is visible)
@@ -101,12 +128,16 @@ pressUpdate.addEventListener("click", function(){
     commentRead.style.display = "inline";
     commentEdit.style.display = "none";
 
-    //TODO: Change this to updating localStorage
-    currentRating = ratingEdit.value;
-    currentComment = commentEdit.value;
+    //Update entry
+    entry["rating"] = ratingEdit.value;
+    entry["comment"] = commentEdit.value;
+    entry["edited"] = true;
 
-    //TODO: Change this to reading values from localStorage
-    ratingRead.innerHTML = currentRating;
-    commentRead.innerHTML = currentComment;
+    //Update localStorage with edited entry
+    window.localStorage.setItem(currentState, JSON.stringify(entry));
+
+    //Setup updated page for read mode
+    ratingRead.innerHTML = entry["rating"];
+    commentRead.innerHTML = entry["comment"];
 
 });
