@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
-//Variables for entry data
+//Variable Declarations
+let mode = "";
 let currentState = "";
 let entry = {};
 
@@ -14,6 +15,7 @@ const commentRead = document.querySelector("#commentRead");
 const commentEdit = document.querySelector("#commentEdit");
 const updateButton = document.querySelector("#updateButton");
 const editButton = document.querySelector("#editButton");
+const exitButton = document.querySelector("#exitButton");
 const editBox = document.querySelector(".edit-box");
 const mainEdit = document.querySelector("#mainEdit");
 
@@ -109,8 +111,7 @@ ratingEdit.addEventListener("change", function(){
 
 //In edit mode (that's the only time update is visible)
 //Edit Mode -> Read Mode
-const pressUpdate = document.querySelector("#updateButton");
-pressUpdate.addEventListener("click", function(){
+updateButton.addEventListener("click", function(){
 
     //Return to read only mode
     mode = "read";
@@ -141,3 +142,16 @@ pressUpdate.addEventListener("click", function(){
     commentRead.innerHTML = entry["comment"];
 
 });
+
+//"X" Exit button
+exitButton.addEventListener("click", function(){
+    //Reset mode
+    mode = "read";
+    //Go to Calendar
+    window.location.href = "../calendar/index.html";
+});
+
+//For navbar clicks
+function resetState(){
+    window.localStorage.setItem("currentState", null);
+}
