@@ -95,7 +95,7 @@ updateButton.addEventListener("click", function(){
     mode = "read";
 
     //Update Buttons
-    editButton.innerHTML = "Edit";
+    editButton.innerHTML = "edit";
     updateButton.style.visibility = "hidden";
 
     //Make data read only
