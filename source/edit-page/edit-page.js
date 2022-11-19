@@ -28,8 +28,10 @@ function init() {
     
     //get the selected date and it's entry
     currentState = JSON.stringify(window.localStorage.getItem("currentState")); //year-month-day
-    entry = JSON.parse(window.localStorage.getItem(currentState)); //{"rating": , "comment": , "editted": }
+    console.log(currentState);
+    entry = JSON.parse(window.localStorage.getItem(JSON.parse(currentState))); //{"rating": , "comment": , "editted": }
 
+    
     //setup the color dictionary
     colors = JSON.parse(window.localStorage.getItem("colors"));
     editBox.style.backgroundColor = colors[entry["rating"]];
@@ -40,7 +42,7 @@ function init() {
     const comment = document.querySelector("#commentRead");
     comment.innerHTML = entry["comment"];
     const date = document.querySelector("#date");
-    date.innerHTML = "date : " + currentState.substring(5,10)+ "-" + currentState.substring(0,4);
+    date.innerHTML = "date : " + currentState.substring(6,11)+ "-" + currentState.substring(1,5);
 
     
 }
@@ -134,7 +136,7 @@ exitButton.addEventListener("click", function(){
 //Yes
 deleteYes.addEventListener("click", function(){
     //delete entry from localStorage
-    window.localStorage.removeItem(currentState);
+    window.localStorage.removeItem(JSON.parse(currentState));
     //Go back to read mode
     mode = "read";
     //Go back to calendar
