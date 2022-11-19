@@ -28,7 +28,6 @@ function init() {
     
     //get the selected date and it's entry
     currentState = JSON.stringify(window.localStorage.getItem("currentState")); //year-month-day
-    console.log(currentState);
     entry = JSON.parse(window.localStorage.getItem(JSON.parse(currentState))); //{"rating": , "comment": , "editted": }
 
     
@@ -115,7 +114,7 @@ updateButton.addEventListener("click", function(){
     entry["edited"] = true;
 
     //Update localStorage with edited entry
-    window.localStorage.setItem(currentState, JSON.stringify(entry));
+    window.localStorage.setItem(JSON.parse(currentState), JSON.stringify(entry));
 
     //Setup updated page for read mode
     ratingRead.innerHTML = entry["rating"];
@@ -136,7 +135,7 @@ exitButton.addEventListener("click", function(){
 //Yes
 deleteYes.addEventListener("click", function(){
     //delete entry from localStorage
-    window.localStorage.removeItem(JSON.parse(currentState));
+    window.localStorage.removeItem(JSON.stringify(currentState));
     //Go back to read mode
     mode = "read";
     //Go back to calendar
@@ -152,7 +151,7 @@ deleteNo.addEventListener("click", function(){
 
 //For navbar clicks
 function resetState(){
-    window.localStorage.setItem("currentState", null);
+    window.localStorage.setItem(JSON.stringify(currentState), null);
 }
 
 
