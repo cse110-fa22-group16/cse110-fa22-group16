@@ -1,7 +1,7 @@
 
 /*Edit Page Styles*/
 .edit-box{
-    background-color:#f1de90; /*TODO: Make this the corresponding color to the rating*/
+    background-color:#f1de90; 
     border-radius: 25px;
     width: 70vw;
     height: 40vw;
@@ -49,10 +49,14 @@
 /*Rating*/
 #ratingRead{
     display: inline;
+    height: 3.5vw;
+    width: 10vw;
 }
 #ratingEdit{
     display: none;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+    height: 3.5vw;
+    width: 10vw;
 }
 
 /*Comment*/
@@ -75,96 +79,39 @@
     width: 50vw;
     height: 10vw;
     font-size: 2vw;
+    background: #F4D77266;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    font-size: 1.5rem;
 }
 
-/*--------------Style from other pages---------------*/
-* {
-    font-family: 'Josefin Sans', sans-serif;
-}
-/* navbar */
-body {
-    background-color: #FCF8E8;
-    margin: 100px 0 0 0;
-}
+#deletePrompt{
 
-header {
-    background-color: #ECB390;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    text-align: center;
-}
-
-header img {
     position: absolute;
-    top: 10px;
-    left: 30px;
-    height: 60px;
+
+    font-size: 3.5vw;
+    width: 60vw;
+    height: 25vw;
+    background-color:#ffec9f; 
+    border-radius: 25px;
+
+    display: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    padding-top: 3vw;
 }
 
-header .date-today {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    font-size: 3rem;
-    color: #FCF8E8;
+#deleteChoice{
+    display:flex;
+    flex-direction: row;
+    margin-top: 1vw;
+    gap: 6vw;
 }
 
-header .to-calendar {
-    position: absolute;
-    top: 28px;
-    right: 30px;
-    font-size: 2rem;
-    text-decoration: none;
-    color: #FCF8E8;
-}
-
-header .to-calendar:hover {
-    color: #224B0C;
-}
-
-@media (max-width: 720px) {
-    header .date-today {
-        display: none;
-    }
-}
-
-/* home page*/
-.reflect-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-
-/*button*/
-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 1.25rem;
-    background: #ECB390;
-    border-radius: 100px;
-    box-shadow: #c49c83 10px 10px 15px -10px;
-    color: #ffffff;
-    
-    padding: 10px 20px;
-    border: 0;
-
-    cursor: pointer;
-}
-
-button:hover {
-    color: #224b0c;
-    background: #e99b63;
+#deleteChoice button{
+    font-size: 4vw
 }
