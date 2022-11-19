@@ -56,7 +56,7 @@ function changePage(date){
     //current date
     //alert(date);
     localStorage.setItem("currentState", date);
-    location.replace('/source/edit-page/edit-page.html');
+    location.replace('../edit-page/edit-page.html');
 }
 
 //delete the whole grids for refreshing purpose.

@@ -40,7 +40,7 @@ function init() {
     const comment = document.querySelector("#commentRead");
     comment.innerHTML = entry["comment"];
     const date = document.querySelector("#date");
-    date.innerHTML = "date : " + currentState.split("").reverse().join("") ;
+    date.innerHTML = "date : " + currentState.substring(5,10)+ "-" + currentState.substring(0,4);
 
     
 }
