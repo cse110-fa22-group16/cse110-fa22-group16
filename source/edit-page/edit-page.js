@@ -27,7 +27,7 @@ function init() {
     mode = "read"; 
     
     //get the selected date and it's entry
-    currentState = window.localStorage.getItem("currentState"); //year-month-day
+    currentState = JSON.stringify(window.localStorage.getItem("currentState")); //year-month-day
     entry = JSON.parse(window.localStorage.getItem(currentState)); //{"rating": , "comment": , "editted": }
 
     //setup the color dictionary
@@ -134,9 +134,7 @@ exitButton.addEventListener("click", function(){
 //Yes
 deleteYes.addEventListener("click", function(){
     //delete entry from localStorage
-    console.log(window.localStorage.getItem(currentState));
     window.localStorage.removeItem(currentState);
-    console.log(window.localStorage.getItem(currentState));
     //Go back to read mode
     mode = "read";
     //Go back to calendar
