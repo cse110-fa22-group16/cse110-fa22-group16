@@ -14,6 +14,15 @@ function getDaysInMonth(year, month) {
     return new Date(year, month, 0).getDate();
   }
 
+/**
+ * Returns the first day of the week of given month year.
+ * If `month`/01/`year` is a Sunday, it returns 0.
+ * If Monday, returns 1. And so on.
+ * 
+ * @param {year} year
+ * @param {month} month 
+ * @returns the first day of the week of given month year
+ */
 function getFirstDay(year, month) {
     return new Date(year, month - 1, 1).getDay();
 }
@@ -101,7 +110,7 @@ function createGrids(year, month){
  */
 function changePage(date){
     //update currentState for edit-page
-    localStorage.setItem("currentState", date);
+    localStorage.setItem('currentState', JSON.stringify(date));
     location.replace('../edit-page/edit-page.html');
 }
 
@@ -122,13 +131,30 @@ function deleteGrids(){
 }
 
 function init(){
-    const date = new Date(); //get today's date
-    const year = date.getFullYear(); //current year
-    const month = date.getMonth() + 1; //current month
+    //currentState logic
+    const currentState = JSON.parse(localStorage.getItem('currentState'));
 
-    createGrids(year, month);
+    let year = 0;
+    let month = 0;
+
+    //case: render today.
+    if (!currentState){
+        const todayDate = new Date(); //get today's date
+        year = todayDate.getFullYear(); //current year
+        month = todayDate.getMonth() + 1; //current month
+        createGrids(year, month);
+    }
+    //case: render currentState.
+    else{
+        const dateArr = currentState.split("-");
+        year = dateArr[0];
+        month = dateArr[1];
+
+        createGrids(year, month);
+    }
     
-    const dateSelectorElement = document.querySelector('#start');
+    const dateSelectorElement = document.querySelector('#dateSelect');
+    dateSelectorElement.setAttribute('value',`${year}-${month}`);
 
     dateSelectorElement.addEventListener('change', () => {
         deleteGrids(); //refresh the calender before generating.
