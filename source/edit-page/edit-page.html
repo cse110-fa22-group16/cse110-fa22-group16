@@ -23,11 +23,9 @@
         <div id = "topBar">
             <div><button id="exitButton" type="button">X</button></div>
             <div><button id="editButton" type="button">edit</button></div>
-
         </div>
 
         <div id = "mainEdit">
-
             <div id = "date">
                 date : 11/7/22
             </div>
@@ -50,8 +48,16 @@
                 <textarea id = "commentEdit"></textarea>
             </div >
             
+            <div id = "deletePrompt">
+                <span> Are you sure you want to delete?</span>
+                <span style = "font-size: 1.5vw">(you will not be able to write another entry for this day)</span>
+                <div id = "deleteChoice">
+                    <div><button id="deleteYes" type="button">yes</button></div>
+                    <div><button id="deleteNo" type="button">no</button></div>
+                </div>
+            </div>
         </div>
-        <button id = "updateButton" type = "button" >Update</button>
+        <button id = "updateButton" type = "button" >update</button>
     </div>
     
 </body>

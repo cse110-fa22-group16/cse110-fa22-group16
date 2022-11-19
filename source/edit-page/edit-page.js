@@ -18,34 +18,11 @@ const editButton = document.querySelector("#editButton");
 const exitButton = document.querySelector("#exitButton");
 const editBox = document.querySelector(".edit-box");
 const mainEdit = document.querySelector("#mainEdit");
+const deleteYes = document.querySelector("#deleteYes");
+const deleteNo = document.querySelector("#deleteNo");
+const deletePrompt = document.querySelector("#deletePrompt");
 
 function init() {
-    //----------------------------------------------------------------
-    //FOR TESTING ONLY - REMOVE AFTER MERGE WITH OTHER PAGES
-    //Mimic the setup other pages will do before getting to edit
-
-    //Hello Page
-    let colorDictTest = {
-        "terrible" : "#8E6E5E",
-        "bad" : "#586689",
-        "neutral" : "#F9DEC9",
-        "good" : "#339989",
-        "great" : "#D7B4F3"
-    }
-    window.localStorage.setItem("colors", JSON.stringify(colorDictTest));
-
-    let newEntry = {
-        "rating" : "good",
-        "comment" : "Today was a good day :)",
-        "edited" : false
-    }
-    window.localStorage.setItem("0000-00-00", JSON.stringify(newEntry));
-
-    //Calendar Page
-    window.localStorage.setItem("currentState", "0000-00-00");
-    //-----------------------------------------------------------------
-
-
     //toggle between read-only and edit mode
     mode = "read"; 
     
@@ -79,7 +56,7 @@ editButton.addEventListener("click", function(){
         mode = "edit";
 
         //Change Buttons
-        editButton.innerHTML = "Delete";            //Turn edit button into delete
+        editButton.innerHTML = "delete";            //Turn edit button into delete
         updateButton.style.visibility = "visible";  //Show update button
         
         //Make inputs editable
@@ -98,8 +75,9 @@ editButton.addEventListener("click", function(){
     //"edit-button" currently is the "delete" button
     //Delete Entry
     else if(mode == "edit"){
-        mode = "read"; //go back to defualt
-        
+        //Display "Are you sure you want to delete?"
+        deletePrompt.style.display = "flex";
+        updateButton.style.visibility = "hidden";
     }
 });
 
@@ -151,7 +129,30 @@ exitButton.addEventListener("click", function(){
     window.location.href = "../calendar/index.html";
 });
 
+//Delete Prompt
+//"Are you sure you want to delete?"
+//Yes
+deleteYes.addEventListener("click", function(){
+    //delete entry from localStorage
+    console.log(window.localStorage.getItem(currentState));
+    window.localStorage.removeItem(currentState);
+    console.log(window.localStorage.getItem(currentState));
+    //Go back to read mode
+    mode = "read";
+    //Go back to calendar
+    window.location.href = "../calendar/index.html";
+});
+//No
+deleteNo.addEventListener("click", function(){
+    
+    deletePrompt.style.display = "none";
+    updateButton.style.visibility = "visible";
+    
+});
+
 //For navbar clicks
 function resetState(){
     window.localStorage.setItem("currentState", null);
 }
+
+
