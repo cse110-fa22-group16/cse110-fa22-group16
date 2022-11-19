@@ -8,13 +8,13 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="calendar-style.css">
-    
+    <link rel="stylesheet" href="common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header> <!-- Header, removed for tidiness. --> </header>
+    <header></header>
     
     <!-- Main container for Calendar -->
     <main>
@@ -26,7 +26,6 @@
             <!-- Start at 2022-01, value = "" for empty inputs -->
             <input type="month" id="start" name="start"
                 min="2022-01" value="">            
-            
             <div class="date-grid">
                 <!-- First row used for labeling. -->
                 <span class="today">Sun</span>
@@ -36,13 +35,6 @@
                 <span>Thu</span>
                 <span>Fri</span>
                 <span>Sat</span>
-
-                
-                <!-- TODO: load grid with JS for dates -->
-                <!-- TODO: depends on how do we plan to load from Storage,
-                we can do clickable button (link to edit-page) later, this might be easier for JS -->
-                <!-- TODO: the divs are placeholders. Delete all the divs and generate them in JS. -->
-    
             </div>
             
         </div>
@@ -52,7 +44,7 @@
     <footer>
     <!-- TBD -->
     </footer>
-
+    <script src="add-navbar.js"></script>
     <script src="calendar-js.js"></script>
 </body>
 </html>

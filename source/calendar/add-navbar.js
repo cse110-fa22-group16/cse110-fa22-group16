@@ -1,8 +1,8 @@
 let header = document.querySelector("header");
 header.innerHTML = `
-<a href="home-page.html"><img src="image/ref.png" alt="Reflect-logo"></a>
+<a href="../hello-page/home-page.html"><img src="image/ref.png" alt="Reflect-logo"></a>
 <span class="date-today"></span>
-<a href="../calendar/index.html" class="to-calendar">my calendar</a>`;
+<a href="index.html" class="to-calendar">my calendar</a>`;
 
 /* for dynamic date */
 let dateObjDynamic = new Date();
