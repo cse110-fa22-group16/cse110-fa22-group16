@@ -27,8 +27,8 @@ function init() {
     mode = "read"; 
     
     //get the selected date and it's entry
-    currentState = JSON.stringify(window.localStorage.getItem("currentState")); //year-month-day
-    entry = JSON.parse(window.localStorage.getItem(JSON.parse(currentState))); //{"rating": , "comment": , "editted": }
+    currentState = JSON.parse(window.localStorage.getItem("currentState")); //year-month-day
+    entry = JSON.parse(window.localStorage.getItem(currentState)); //{"rating": , "comment": , "editted": }
 
     
     //setup the color dictionary
@@ -114,7 +114,7 @@ updateButton.addEventListener("click", function(){
     entry["edited"] = true;
 
     //Update localStorage with edited entry
-    window.localStorage.setItem(JSON.parse(currentState), JSON.stringify(entry));
+    window.localStorage.setItem(currentState, JSON.stringify(entry));
 
     //Setup updated page for read mode
     ratingRead.innerHTML = entry["rating"];
