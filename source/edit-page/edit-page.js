@@ -135,7 +135,7 @@ exitButton.addEventListener("click", function(){
 //Yes
 deleteYes.addEventListener("click", function(){
     //delete entry from localStorage
-    window.localStorage.removeItem(JSON.stringify(currentState));
+    window.localStorage.removeItem(currentState);
     //Go back to read mode
     mode = "read";
     //Go back to calendar
