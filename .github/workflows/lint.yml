@@ -54,7 +54,7 @@ jobs:
         continue-on-error: true
         run: |
           npm install -g csslint
-          csslint --errors=box-model,display-property-grouping,duplicate-properties,empty-rules,known-properties *.css
+          csslint --errors=box-model,display-property-grouping,duplicate-properties,empty-rules,known-properties **/*.css
   
 
   lintjs:
@@ -66,4 +66,4 @@ jobs:
         continue-on-error: true
         run: |
           npm install xo --save-dev
-          npx xo *.js --env=node
+          npx xo **/*.js --env=node
