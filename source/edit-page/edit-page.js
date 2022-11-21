@@ -23,6 +23,17 @@ const deleteNo = document.querySelector("#deleteNo");
 const deletePrompt = document.querySelector("#deletePrompt");
 
 function init() {
+    //Temporary manually setting up colors
+    colors = 
+    {
+        terrible: '#8E6E5E',
+        bad: '#586689',
+        neutral: '#F9DEC9',
+        good: '#339989',
+        great: '#D7B4F3'
+    }
+
+    
     //toggle between read-only and edit mode
     mode = "read"; 
     
@@ -32,7 +43,7 @@ function init() {
 
     
     //setup the color dictionary
-    colors = JSON.parse(window.localStorage.getItem("colors"));
+    //colors = JSON.parse(window.localStorage.getItem("colors")); ADD THIS LINE BACK IN ONCE COLORS ARE ADDED IN
     editBox.style.backgroundColor = colors[entry["rating"]];
 
     //setup starting value display
@@ -41,7 +52,7 @@ function init() {
     const comment = document.querySelector("#commentRead");
     comment.innerHTML = entry["comment"];
     const date = document.querySelector("#date");
-    date.innerHTML = "date : " + currentState.substring(6,11)+ "-" + currentState.substring(1,5);
+    date.innerHTML = "date : " + currentState.substring(5,10)+ "-" + currentState.substring(0,4);
 
     
 }
@@ -151,7 +162,7 @@ deleteNo.addEventListener("click", function(){
 
 //For navbar clicks
 function resetState(){
-    window.localStorage.setItem(JSON.stringify(currentState), null);
+    window.localStorage.setItem('currentState', null);
 }
 
 
