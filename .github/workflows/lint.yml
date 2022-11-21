@@ -6,7 +6,7 @@ name: Lint
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "main" ]
+    branches: [ "Sprint" ]
   pull_request:
     branches: [ "main" ]
 
@@ -35,6 +35,26 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   
+  jsDocs:
+    name: jsDocs Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build jsDocs
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./source
+          recurse: true
+          output_dir: ./out
+          front_page: README.md
+      - name: Pushing
+        run: |
+          git config user.name "hanghanghappy"
+          git config user.email "chc063@ucsd.edu"
+          git add out/*
+          git commit -m "GitHub Documentations" --allow-empty
+          git push
+    
   linthtml:
     runs-on: ubuntu-latest
     steps:
