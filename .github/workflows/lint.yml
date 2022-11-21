@@ -53,7 +53,7 @@ jobs:
           git config user.email "chc063@ucsd.edu"
           git add out/*
           git commit --message "GitHub Documentations"
-          git push --force
+          git push origin Sprint --force
   
   linthtml:
     runs-on: ubuntu-latest
