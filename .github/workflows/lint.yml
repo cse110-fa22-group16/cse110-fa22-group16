@@ -49,6 +49,7 @@ jobs:
           front_page: README.md
       - name: Pushing
         run: |
+          git remote add origin https://github.com/cse110-fa22-group16/cse110-fa22-group16.git
           git config user.name "hanghanghappy"
           git config user.email "chc063@ucsd.edu"
           git add out/*
