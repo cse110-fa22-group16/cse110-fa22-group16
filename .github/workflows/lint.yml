@@ -52,7 +52,7 @@ jobs:
           git config user.name "hanghanghappy"
           git config user.email "chc063@ucsd.edu"
           git add out/*
-          git commit --message "GitHub Documentations"
+          git commit -m "GitHub Documentations" --allow-empty
           git push origin Sprint --force
   
   linthtml:
