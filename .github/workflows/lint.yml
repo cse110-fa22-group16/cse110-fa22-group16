@@ -66,4 +66,4 @@ jobs:
         continue-on-error: true
         run: |
           npm install xo --save-dev
-          npx xo *.js --env=node
+          npx xo source --env=node
