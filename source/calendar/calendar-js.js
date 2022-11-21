@@ -43,11 +43,11 @@ function getFirstDay(year, month) {
 function createGrids(year, month){
     // TODO: `colors` should be retrieved from `localStorage`. Placeholder data for now.
     const colors = {
-        terrible: "red",
-        bad: "orange",
-        neutral: "blue",
-        good: "green",
-        great: "pink"
+        terrible: "#8E6E5E",
+        bad: "#586689",  
+        neutral: "#F9DEC9",
+        good: "#339989",
+        great: "#D7B4F3"
     }
 
     const today = new Date();
