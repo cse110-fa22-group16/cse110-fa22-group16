@@ -6,9 +6,9 @@ name: Lint
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -45,7 +45,6 @@ jobs:
         run: |
           npm install htmlhint --save-dev
           npx htmlhint "**/*.html"
-
   lintcss:
     runs-on: ubuntu-latest
     steps:
@@ -55,7 +54,7 @@ jobs:
         continue-on-error: true
         run: |
           npm install -g csslint
-          csslint --errors=box-model,display-property-grouping,duplicate-properties,empty-rules,known-properties *.css
+          csslint --errors=box-model,display-property-grouping,duplicate-properties,empty-rules,known-properties source
   
 
   lintjs:
@@ -67,4 +66,4 @@ jobs:
         continue-on-error: true
         run: |
           npm install xo --save-dev
-          npx xo *.js --env=node
+          npx xo source --env=node
