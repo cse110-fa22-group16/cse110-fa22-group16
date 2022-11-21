@@ -49,8 +49,8 @@ jobs:
           front_page: README.md
       - name: Pushing
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "hanghanghappy"
+          git config user.email "chc063@ucsd.edu"
           git add out/*
           git commit --message "GitHub Documentations"
           git push --force
