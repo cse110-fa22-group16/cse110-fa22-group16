@@ -1,3 +1,9 @@
+let dateObj = new Date();
+let date = dateObj.getDate();
+let month = dateObj.getMonth() + 1;
+let year = dateObj.getFullYear();
+let key = `${year}-${month}-${date}`;
+
 window.addEventListener('DOMContentLoaded', init);
 
 /**
@@ -5,12 +11,6 @@ window.addEventListener('DOMContentLoaded', init);
  * three user flow pages (home-page, prompt-page, finish-page).
  */
 function init() {
-    let dateObj = new Date();
-    let date = dateObj.getDate();
-    let month = dateObj.getMonth() + 1;
-    let year = dateObj.getFullYear();
-    let key = `${year}-${month}-${date}`;
-
     let form = document.querySelector("#prompt-form");
     if (form != null) {
         form.addEventListener("submit", submitAndStore);
