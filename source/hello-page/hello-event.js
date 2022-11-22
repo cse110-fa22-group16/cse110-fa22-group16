@@ -16,6 +16,23 @@ if (goButton != null) {
     goButton.addEventListener("click", checkAndGo);
 }
 
+let todayEntryBtn = document.querySelector(".today-entry-btn");
+if (todayEntryBtn != null) {
+    todayEntryBtn.addEventListener("click", stageAndGoToEntry);
+}
+
+const colors = {
+    terrible: "#8E6E5E",
+    bad: "#586689",
+    neutral: "#F9DEC9",
+    good: "#339989",
+    great: "#D7B4F3"
+};
+
+if (localStorage.getItem('colors') == null) {
+    localStorage.setItem('colors', JSON.stringify(colors));
+}
+
 /**
  * handle the prompt page form submission and store the information 
  * as an entry with date as key in localStorage
@@ -40,4 +57,9 @@ function checkAndGo() {
     else {
         location.href = "finish-page.html";
     }
+}
+
+function stageAndGoToEntry() {
+    localStorage.setItem('currentState', JSON.stringify(key));
+    location.href = "../edit-page/edit-page.html";
 }
