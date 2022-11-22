@@ -4,7 +4,8 @@
 - **11/22/22 1:00PM - 3:00PM**
 - **Location: Geisel Library 1st Floor**
 
-### Attendance: Max, Gunwoo, Benjamin, Alina, Tianyu, Harry
+### Attendance:
+- Max, Gunwoo, Benjamin, Alina, Tianyu, Harry
 
 ### Agenda:
 
