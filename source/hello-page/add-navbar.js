@@ -15,7 +15,9 @@ if (headerDate != null) {
     headerDate.textContent = `${monthDynamic}/${dateDynamic}/${yearDynamic}`;
 }
 
-//For navbar clicks
+/**
+ * Reset the currentState to null. Handle clicking logo or "my calendar" in the navbar.
+ */
 function resetState(){
     window.localStorage.setItem('currentState', null);
 }
