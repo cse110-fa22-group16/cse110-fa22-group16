@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: hello-page/add-navbar.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,42 +17,40 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: hello-page/add-navbar.js</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h1>CSE 110 Fall 2022 Group 16 (GitHubbies)</h1>
-<p><img src="admin/branding/Hubby-logo.png" alt="mascot hubby"></p>
-<p><strong>Team Leads</strong>: Abishek Siva and Gunwoo Kim</p>
-<p><strong>TA</strong>: Shubham Kumar</p>
-<p><a href="admin/team.md">Check out our Team Page</a></p>
-<h2>About</h2>
-<p>This is a CRUD format app that group UCSD students will develop in one quarter.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>let header = document.querySelector("header");
+header.innerHTML = `
+&lt;a href="home-page.html" onclick="resetState()">&lt;img src="image/ref.png" alt="Reflect-logo">&lt;/a>
+&lt;span class="date-today">&lt;/span>
+&lt;a href="../calendar/index.html" class="to-calendar" onclick="resetState()">my calendar&lt;/a>`;
+
+/* for dynamic date */
+let dateObjDynamic = new Date();
+let dateDynamic = dateObjDynamic.getDate();
+let monthDynamic = dateObjDynamic.getMonth() + 1;
+let yearDynamic = dateObjDynamic.getFullYear();
+
+let headerDate = document.querySelector('header>.date-today');
+if (headerDate != null) {
+    headerDate.textContent = `${monthDynamic}/${dateDynamic}/${yearDynamic}`;
+}
+
+/**
+ * Reset the currentState to null. Handle clicking logo or "my calendar" in the navbar.
+ */
+function resetState(){
+    window.localStorage.setItem('currentState', null);
+}</code></pre>
+        </article>
     </section>
-
-
 
 
 
