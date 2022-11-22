@@ -18,6 +18,11 @@ Week 9: Integrate All Three Teams
 - All teams unit testing should be done by Tuesday
 - Merge all three teams to Sprint Branch
 
-Week 10: Finishing Touches
+Week 10: Finishing Touches/Coding Freeze
+- Pipeline check on Tuesday
+- All testing/JS docs completed
+- Finishing app details
+- Github repo updated
 
 Week 11: Project Due
+- Final Deployment & Submission
