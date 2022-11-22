@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', init);
 
 /**
- * handle form submission, button clicking, and localStorage specific to the 
- * three user flow pages (home-page, prompt-page, finish-page)
+ * Handle form submission, button clicking, and localStorage specific to the 
+ * three user flow pages (home-page, prompt-page, finish-page).
  */
 function init() {
     let dateObj = new Date();
@@ -39,8 +39,8 @@ function init() {
     }
 
     /**
-     * handle the prompt page form submission and store the information including feeling and comment
-     * as an entry with date as key in localStorage
+     * Handle the prompt page form submission and store the information 
+     * including feeling and comment as an entry with date as key in localStorage.
      */
     function submitAndStore() {
         let formData = new FormData(form);
@@ -56,8 +56,8 @@ function init() {
     }
 
     /**
-     * handle home page clicking "let's go" button: take to prompt page if 
-     * today's entry does not exist; take to finish page if today's entry exists
+     * Handle home page clicking "let's go" button: take to prompt page if 
+     * today's entry does not exist; take to finish page if today's entry exists.
      */
     function checkAndGo() {
         if (localStorage.getItem(key) == null) {
@@ -69,8 +69,8 @@ function init() {
     }
 
     /**
-     * handle finish page clicking "your entry" button: store currentStage as
-     * today's date and take to the edit page for today's entry
+     * Handle finish page clicking "your entry" button: store currentStage as
+     * today's date and take to the edit page for today's entry.
      */
     function stageAndGoToEntry() {
         localStorage.setItem('currentState', JSON.stringify(key));
