@@ -1,0 +1,65 @@
+/* main container */
+main {
+    background-color: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    height: calc(100vh - 100px); /* 100px accounts for padding and header */
+}
+
+/* calendar */
+.calendar {
+    background-color: rgb(255, 255, 255);
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+
+    height: 65vh;
+    width: 60vh;
+
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.selectLabel {
+    font-size: 1rem;
+}
+
+.date-grid {
+    background: none;
+
+    display: grid;
+
+    /* create 7x7 grid */
+    grid-template-columns: 8vh 8vh 8vh 8vh 8vh 8vh 8vh;
+    grid-template-rows:    8vh 8vh 8vh 8vh 8vh 8vh 8vh;
+}
+
+/* day of the week span containers */
+.date-grid > span {
+    display: inline;
+    text-align: center;
+    font-size: 3vh;
+    padding-top: 50%;
+}
+
+/* day class */
+.day {
+    /* TODO: After days in */
+
+    border-color: rgb(150, 150, 150);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* today class */
+.today {
+    border-width: 2px;
+    border-color: black;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Settings, already consistent with home-page -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Page</title>
+    
+    <link rel="stylesheet" href="calendar-style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    
+    <!-- Main container for Calendar -->
+    <main>
+
+        <!-- Calendar -->
+        <div class="calendar">
+            <!-- Already has option of "This Month"-->
+            <label for="dateSelect" class="selectLabel">Select Month & Year:</label>
+            <!-- Start at 2022-01, value = "" for empty inputs -->
+            <input type="month" id="dateSelect" name="start"
+                min="2022-01" value="">            
+            <div class="date-grid">
+                <!-- First row used for labeling. -->
+                <span class="today">Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer>
+    <!-- TBD -->
+    </footer>
+    <script src="add-navbar.js"></script>
+    <script src="calendar-js.js"></script>
+</body>
+</html>

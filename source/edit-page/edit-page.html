@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+
+    <link rel="stylesheet" href="edit-page-style.css" />
+    <link rel="stylesheet" href="common.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header></header>
+
+    <!-- Entry Edit Page -->
+    <div class = "edit-box">
+        <div id = "topBar">
+            <div><button id="exitButton" type="button">X</button></div>
+            <div><button id="editButton" type="button">edit</button></div>
+        </div>
+
+        <div id = "mainEdit">
+            <div id = "date"></div>
+
+            <div id = "rating">
+                rating: <span id = "ratingRead"></span>
+                <select name="ratings" id="ratingEdit" >
+                    <option value="terrible">terrible</option>
+                    <option value="bad">bad</option>
+                    <option value="neutral">neutral</option>
+                    <option value="good">good</option>
+                    <option value="great">great</option>
+                </select>
+            </div >
+
+            <div id = "comment">
+                comment:<br>  
+                <span id = "commentRead"></span>
+                <label for="commendEdit"></label>
+                <textarea id = "commentEdit"></textarea>
+            </div >
+            
+            <div id = "deletePrompt">
+                <span> Are you sure you want to delete?</span>
+                <span style = "font-size: 1.5vw">(you will not be able to write another entry for this day)</span>
+                <div id = "deleteChoice">
+                    <div><button id="deleteYes" type="button">yes</button></div>
+                    <div><button id="deleteNo" type="button">no</button></div>
+                </div>
+            </div>
+        </div>
+        <button id = "updateButton" type = "button" >update</button>
+    </div>
+    
+</body>
+</html>
+
+<script src="edit-page.js"></script>
+<script src="add-navbar.js"></script>s
