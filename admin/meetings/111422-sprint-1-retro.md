@@ -1,5 +1,5 @@
 # Sprint 1 Retrospective
-## 11/14/22
+## 11/14/22 (Week 7 Reflection)
 
 ### What went well
     - White board that shows the tasks and who is assigned to that task

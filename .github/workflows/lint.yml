@@ -34,7 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> main
   jsDocs:
     name: jsDocs Documentation
     runs-on: ubuntu-latest
@@ -54,7 +58,11 @@ jobs:
           git add out/*
           git commit -m "GitHub Documentations" --allow-empty
           git push
+<<<<<<< HEAD
     
+=======
+  
+>>>>>>> main
   linthtml:
     runs-on: ubuntu-latest
     steps:
@@ -65,11 +73,20 @@ jobs:
         run: |
           npm install htmlhint --save-dev
           npx htmlhint "**/*.html"
+<<<<<<< HEAD
   lintcss:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
+=======
+
+  lintcss:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+>>>>>>> main
       - name: lint css
         continue-on-error: true
         run: |

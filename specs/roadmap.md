@@ -1,21 +1,28 @@
-Week 6: 
-- Issues
-- Explore 
-- Testing 
+Week 6: Explore
+- Define issues
+- Explore implementation options for calendar
+- Define test cases
 
-Week 7: 
-- Continue Frontend Development
-- HTML Frame (Frontend)
-  - Calendar Grid (7X7)
-  - List out buttons
-- Implement Backend
-- Testing
+Week 7: Individual Team Tasks
+- Hello team: HTML/CSS for all three pages (intro page, entry page, finish page)
+- Calender team: HTML Frame (Frontend), Calendar Grid (7X7), List out buttons
+- Edit: HTML/CSS
 
-Week 8:
-- Finish basic functionality (Tuesday)
-- Testing/Start Backlog (some test, some add)
+Week 8: Individual Team Tasks
+- Hello team: JS for all three pages (intro page, entry page, finish page)
+- Calender team: Planned interaction all three teams
+- Edit: basic functionality JS
 
-Week 9:
-- Polishing/Final changes
+Week 9: Integrate All Three Teams
+- All teams(Hello/Cal/Edit/CI/CD/Testing) basic funtionality should be done by Monday
+- All teams unit testing should be done by Tuesday
+- Merge all three teams to Sprint Branch
 
-Week 10: Project Done (by the end of the week)
+Week 10: Finishing Touches/Coding Freeze
+- Pipeline check on Tuesday
+- All testing/JS docs completed
+- Finishing app details
+- Github repo updated
+
+Week 11: Project Due
+- Final Deployment & Submission
