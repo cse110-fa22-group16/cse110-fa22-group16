@@ -1,4 +1,4 @@
-# {Decision on what components will be included for prompt user flow}
+# {How to Handle `currentState` Variable}
 
 * Status: {accept}
 * Deciders: {all team members} <!-- optional -->
