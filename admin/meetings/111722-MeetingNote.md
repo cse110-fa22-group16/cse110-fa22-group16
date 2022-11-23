@@ -15,7 +15,6 @@
 ### Agenda:
  
 1. Open MM
-2. 
 Individual team tasks:
   - Hello | Edit | Calendar
   - Testing
@@ -25,4 +24,3 @@ General Team Tasks:
   - Agile team video
   - Week team tags
   - Implementation and populate html: come after all basic function are done
-  

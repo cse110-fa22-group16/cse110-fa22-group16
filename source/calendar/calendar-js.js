@@ -1,4 +1,11 @@
-window.addEventListener('DOMContentLoaded', init);
+module.exports = { getDaysInMonth, getFirstDay };
+
+try {
+    window.addEventListener('DOMContentLoaded', init);
+}
+catch {
+    console.log("Something went terribly wrong.");
+}
 
 /**
  * Returns the number of days in `month` and `year`.
