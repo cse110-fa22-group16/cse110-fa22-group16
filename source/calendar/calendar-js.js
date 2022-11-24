@@ -1,11 +1,10 @@
-module.exports = { getDaysInMonth, getFirstDay };
+try { // only in testing.
+    module.exports = { getDaysInMonth, getFirstDay };
+} catch {}
 
-try {
+try { // only in deployment.
     window.addEventListener('DOMContentLoaded', init);
-}
-catch {
-    console.log("Something went terribly wrong.");
-}
+} catch {}
 
 /**
  * Returns the number of days in `month` and `year`.
