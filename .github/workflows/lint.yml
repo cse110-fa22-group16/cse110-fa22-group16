@@ -86,3 +86,14 @@ jobs:
         run: |
           npm install xo --save-dev
           npx xo source --env=node
+  
+  jest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: jest
+        continue-on-error: true
+        run: |
+          npm install --save-dev jest
+          npm test
