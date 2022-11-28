@@ -4,6 +4,19 @@
 - **11/22/22 12:30PM - 1:00PM**
 - **Location: Zoom**
 
+### Attendance: 
+- [x] Shubham Kumar (TA)
+- [x] Gunwoo Kim (Lead)
+- [x] Abishek Siva (Lead)
+- [ ] Maximillian Chen
+- [x] Chun Hang Chan
+- [x] Raymond Umbas
+- [x] Shantelle Serafin
+- [x] Jerry Wang
+- [x] Xiangyi Lin
+- [x] Tianyu Chen
+- [x] Hung-I Huang
+
 ### Notes:
   - Finish setting up tests in the pipeline. (Henry just did this)
   - checkpoint is good for week 10 (this week)!!!
