@@ -98,6 +98,15 @@ const deleteNo = document.querySelector("#deleteNo");
  */
 const deletePrompt = document.querySelector("#deletePrompt");
 
+const deleteToday = document.querySelector("#deleteToday");
+const deleteNotToday = document.querySelector("#deleteNotToday");
+
+let dateObj = new Date();
+let date = dateObj.getDate();
+let month = dateObj.getMonth() + 1;
+let year = dateObj.getFullYear();
+let today = `${year}-${month}-${date}`;
+
 //---------------------------------Event Listeners----------------------------------
 editButton.addEventListener("click", editMode);
 ratingEdit.addEventListener("change", updateBackColor);
@@ -140,6 +149,14 @@ function editMode(){
     //In edit mode, "edit-button" currently is the "delete" button
     else if(mode == "edit"){
         //Display "Are you sure you want to delete?"
+        if(today == JSON.parse(window.localStorage.getItem("currentState"))){
+            deleteToday.style.display = "flex";
+            deleteNotToday.style.display = "none";
+        }
+        else{
+            deleteToday.style.display = "none";
+            deleteNotToday.style.display = "flex";
+        }
         deletePrompt.style.display = "flex";
         updateButton.style.visibility = "hidden";
     }
