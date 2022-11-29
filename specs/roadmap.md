@@ -21,8 +21,10 @@ Week 9: Integrate All Three Teams
 Week 10: Finishing Touches/Coding Freeze
 - Pipeline check on Tuesday
 - All testing/JS docs completed
-- Finishing app details
 - Github repo updated
+- Stretch Goals for Key & Pie chart
 
 Week 11: Project Due
-- Final Deployment & Submission
+- Final Deployment
+- Public Video Submission
+- Private Video
