@@ -22,7 +22,7 @@ Week 10: Finishing Touches/Coding Freeze
 - Pipeline check on Tuesday
 - All testing/JS docs completed
 - Github repo updated
-- Stretch Goals for Key & Pie chart
+- Stretch Goals for Key
 
 Week 11: Project Due
 - Final Deployment
