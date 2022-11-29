@@ -63,3 +63,81 @@ main {
     border-width: 2px;
     border-color: black;
 }
+
+
+
+.data {
+    margin-left: 1vh;
+    height: 65vh;
+    width: 60vh;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.pie {
+    background-color: rgb(255, 255, 255);
+    margin-top: 2vh;
+    height: 50vh;
+    width: 60vh;
+    border-radius: 40px;
+}
+
+.key {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 40px;
+}
+
+input[type=radio] {
+    display: none;      /* hide the radio button */
+}
+
+.feelingsChoices {
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: 4.7vh;
+    height: 1.5vh;
+    text-align: center;
+    font-size: 1.6vh;
+}
+
+input + label{
+    display: inline-block;
+    border-radius: 10px;
+
+    padding: 2vh 2.8vh;
+    border: 0;
+}
+
+#terrible + label{
+    background: #8E6E5E;
+    box-shadow: #8E6E5E 1vh 0.8vh 1vh -1vh;
+    color: #000000;
+}
+
+#bad + label{
+    background: #586689;
+    box-shadow: #586689 1vh 0.8vh 1vh -1vh;
+    color: #000000;
+}
+
+#neutral + label{
+    background: #F9DEC9;
+    box-shadow: #F9DEC9 1vh 0.8vh 1vh -1vh;
+    color: #000000;
+}
+
+#good + label{
+    background: #339989;
+    box-shadow: #339989 1vh 0.8vh 1vh -1vh;
+    color: #000000;
+}
+
+#great + label{
+    background: #D7B4F3;
+    box-shadow: #D7B4F3 1vh 0.8vh 1vh -1vh;
+    color: #000000;
+}
