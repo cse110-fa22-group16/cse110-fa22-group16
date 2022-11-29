@@ -1,4 +1,4 @@
-# {Description and descision of pie chart and key}
+# {Description and descision of key}
 
 * Status: {accept}
 * Deciders: {all team members}
@@ -6,20 +6,20 @@
 
 ## Context and Problem Statement
 
-* The point of the app is to reflect on the documentation of one's mental health. Thus, we need a key and pie chart on the calendar to make one's data more digestable.
+* The point of the app is to reflect on the documentation of one's mental health. Thus, we need a key on the calendar to make one's data more readable.
 
 ## Decision Drivers
 
-* We have the time to implement these stretch features
+* We have the time to implement this stretch feature
 
 ## Considered Options
 
 * No pie chart, but key
+* Both pie chart and key
 
 ## Decision Outcome
 
-* Both pie chart and key
-* Pie chart will be dynamic and show the current the breakdown of the colors and responses. None responses will not be included. 
+* No pie chart, but key
 * Key will be a mini version of the entry prompt
 
 <!-- markdownlint-disable-file MD013 -->
