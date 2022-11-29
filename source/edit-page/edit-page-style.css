@@ -114,6 +114,14 @@
     gap: 6vw;
 }
 
+#deleteToday{
+    display: none;
+}
+
+#deleteNotToday{
+    display: none;
+}
+
 #deleteChoice button{
     font-size: 4vw
 }
