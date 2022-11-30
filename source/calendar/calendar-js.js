@@ -1,3 +1,63 @@
+function generateChart(year, month){
+   
+    let countTerrible, countBad, countNeutral, countGood, countGreat = 0;
+    
+    let numberDays = getDaysInMonth(year, month)
+
+    for(let i = 1; i <= numberDays; i++){
+
+
+        
+        let mood = JSON.parse(localStorage.getItem(`${year}-${month}-${i}`))['rating'];
+        if(mood == 'terrible'){
+            countTerrible++;
+        }
+        else if(mood == 'bad'){
+            countBad++;
+        }
+        else if(mood == 'neutral'){
+            countNeutral++;
+        }
+        else if(mood == 'good'){
+            countGood++;
+        }
+        else{
+            countGreat++;
+        }
+    }
+
+    console.log(countGood);
+}
+
+anychart.onDocumentReady(function() {
+
+    // set the data
+    var data = [
+        {x: "White", value: 223553265},
+        {x: "Black or African American", value: 38929319},
+        {x: "American Indian and Alaska Native", value: 2932248},
+        {x: "Asian", value: 14674252},
+        {x: "Native Hawaiian and Other Pacific Islander", value: 540013},
+        {x: "Some Other Race", value: 19107368},
+        {x: "Two or More Races", value: 9009073}
+    ];
+  
+    // create the chart
+    var chart = anychart.pie();
+  
+    // set the chart title
+    chart.title("Population by Race for the United States: 2010 Census");
+  
+    // add the data
+    chart.data(data);
+  
+    // display the chart in the container
+    chart.container('pie');
+    chart.draw();
+  });
+
+
+
 try { // only in testing.
     module.exports = { getDaysInMonth, getFirstDay };
 } catch {}
@@ -169,4 +229,6 @@ function init(){
         const month = dateArr[1] - 0;
         createGrids(year, month);
     });
+
+    generateChart(year, month);
 }

@@ -12,7 +12,7 @@ main {
 
 /* calendar */
 .calendar {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 
     text-align: center;
     display: flex;
@@ -64,8 +64,6 @@ main {
     border-color: black;
 }
 
-
-
 .data {
     margin-left: 1vh;
     height: 65vh;
@@ -74,7 +72,7 @@ main {
     border-radius: 40px;
 }
 
-.pie {
+#pie {
     background-color: rgb(255, 255, 255);
     margin-top: 2vh;
     height: 50vh;
@@ -83,7 +81,7 @@ main {
 }
 
 .key {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFF004D;
     padding: 20px;
     border-radius: 40px;
 }
@@ -96,7 +94,7 @@ input[type=radio] {
     text-align: center;
 }
 
-label {
+.key.label {
     display: block;
     width: 4.7vh;
     height: 1.5vh;
