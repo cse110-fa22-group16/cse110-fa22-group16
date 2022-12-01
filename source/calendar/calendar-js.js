@@ -1,60 +1,91 @@
 function generateChart(year, month){
    
-    let countTerrible, countBad, countNeutral, countGood, countGreat = 0;
-    
+    let countTerrible = 0;
+    let countBad = 0;
+    let countNeutral = 0;
+    let countGood = 0;
+    let countGreat = 0;
+
     let numberDays = getDaysInMonth(year, month)
 
     for(let i = 1; i <= numberDays; i++){
-
-
         
-        let mood = JSON.parse(localStorage.getItem(`${year}-${month}-${i}`))['rating'];
-        if(mood == 'terrible'){
-            countTerrible++;
-        }
-        else if(mood == 'bad'){
-            countBad++;
-        }
-        else if(mood == 'neutral'){
-            countNeutral++;
-        }
-        else if(mood == 'good'){
-            countGood++;
-        }
-        else{
-            countGreat++;
+        temp = localStorage.getItem(`${year}-${month}-${i}`);
+
+        if(temp != null){
+            let mood = JSON.parse(temp)['rating'];
+            if(mood == 'terrible'){
+                countTerrible++;
+            }
+            else if(mood == 'bad'){
+                countBad++;
+            }
+            else if(mood == 'neutral'){
+                countNeutral++;
+            }
+            else if(mood == 'good'){
+                countGood++;
+            }
+            else{
+                countGreat++;
+            }
         }
     }
 
-    console.log(countGood);
-}
+    const divElement = document.querySelector('.data');
+    const pieDiv = document.createElement('div');
+    pieDiv.id = 'pie';
 
-anychart.onDocumentReady(function() {
-
+    divElement.appendChild(pieDiv);
+    
     // set the data
     var data = [
-        {x: "White", value: 223553265},
-        {x: "Black or African American", value: 38929319},
-        {x: "American Indian and Alaska Native", value: 2932248},
-        {x: "Asian", value: 14674252},
-        {x: "Native Hawaiian and Other Pacific Islander", value: 540013},
-        {x: "Some Other Race", value: 19107368},
-        {x: "Two or More Races", value: 9009073}
+        {x: "Bad", value: countBad,
+        normal:  {
+            fill: "#586689"      
+        }
+        },
+
+        {x: "Terrible", value: countTerrible,
+        normal:  {
+            fill: "#8E6E5E"       
+        }
+        },
+
+        {x: "Neutral", value: countNeutral,
+        normal:  {
+            fill: "#F9DEC9"    
+        }
+        },
+
+        {x: "Good", value: countGood,
+        normal:  {
+            fill: "#339989"        
+        }
+        },
+
+        {x: "Great", value: countGreat,
+        normal:  {
+            fill: "#D7B4F3"      
+        }
+        },
     ];
-  
-    // create the chart
+    
     var chart = anychart.pie();
-  
+
     // set the chart title
     chart.title("Population by Race for the United States: 2010 Census");
-  
+    
     // add the data
     chart.data(data);
-  
+
+    chart.colors
+    
     // display the chart in the container
     chart.container('pie');
     chart.draw();
-  });
+   
+}
 
 
 
@@ -219,6 +250,8 @@ function init(){
         createGrids(year, month);
     }
     
+    generateChart(year, month);
+
     const dateSelectorElement = document.querySelector('#dateSelect');
     dateSelectorElement.setAttribute('value',`${year}-${month}`);
 
@@ -228,7 +261,13 @@ function init(){
         const year = dateArr[0] - 0;
         const month = dateArr[1] - 0;
         createGrids(year, month);
+
+        const pie = document.querySelector('#pie');
+   
+        pie.remove();
+        
+        generateChart(year, month);
     });
 
-    generateChart(year, month);
+    
 }
