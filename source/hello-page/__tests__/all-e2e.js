@@ -5,11 +5,11 @@ let year = dateObj.getFullYear();
 let key = `${year}-${month}-${date}`;
 const navigationPromise = page.waitForNavigation({ waitUntil: ['load', 'networkidle2'] });
 
-jest.setTimeout(200000);
+jest.setTimeout(300000);
 
 const moodList = ['terrible', 'bad', 'neutral', 'good', 'great'];
 
-describe('Whole website test', () => {
+describe('Home Page and Prompt Page test', () => {
     // Home Page Test
     beforeAll(async () => {
         await page.setDefaultNavigationTimeout(0);
@@ -47,7 +47,7 @@ describe('Whole website test', () => {
         }
 });
 
-describe('Prompt Test and Edit Test', () => {
+describe('Edit and Delete Test', () => {
     beforeAll(async() => {
         await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/prompt-page.html');
     });
@@ -89,10 +89,7 @@ describe('Prompt Test and Edit Test', () => {
 
         });
     }
-});
 
-// Delete Test
-describe('Delete Test', () => {
     beforeAll(async() => {
         await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/edit-page/edit-page.html');
     });
@@ -120,3 +117,23 @@ describe('Delete Test', () => {
     });
 });
 
+describe('Checking calendar after all operations', () => {
+
+    beforeAll(async () => {
+        await page.setDefaultNavigationTimeout(0);
+        await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/calendar/index.html');
+    });
+
+    /* Test initial behavior of the Date Selector */
+    it("Date selector initializes to today's date.", async () => {
+        const selector = await page.$('#dateSelect');
+        const value = await selector.getProperty('value');
+        const rawValue = await value.jsonValue();
+        const todayDate = new Date();
+        
+        const year = todayDate.getFullYear();
+        const month = todayDate.getMonth() + 1;
+
+        expect(rawValue).toBe(year + '-' + month);
+    });
+});
