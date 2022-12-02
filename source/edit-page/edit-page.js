@@ -109,6 +109,16 @@ deleteNo.addEventListener("click", dontDelete );
 
 //-------------------------------Function Definitions-------------------------------
 /**
+ * Returns the current mode value for easier testing.
+ * @return {String} Read, Edit
+ * @function
+ */
+function getMode() {
+    return mode;
+}
+
+
+/**
  * Switches the page from read mode to edit mode, 
  * where the rating and comment are now editable.
  * If already in edit mode, delete current entry.
