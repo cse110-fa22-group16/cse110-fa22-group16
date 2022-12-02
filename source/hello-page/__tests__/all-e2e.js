@@ -5,7 +5,7 @@ let year = dateObj.getFullYear();
 let key = `${year}-${month}-${date}`;
 const navigationPromise = page.waitForNavigation({ waitUntil: ['load', 'networkidle2'] });
 
-jest.setTimeout(100000);
+jest.setTimeout(500000);
 
 const moodList = ['terrible', 'bad', 'neutral', 'good', 'great'];
 
@@ -17,6 +17,7 @@ describe('Whole website test', () => {
     });    
     it('check let\'s go button link to prompt page, if not enter yet', async () => {
         await page.click('button');
+        await page.waitForNavigation();
         const title = await page.title();
         expect(title).toBe('Prompt Page');
     });
@@ -58,10 +59,10 @@ describe('Whole website test', () => {
 
             const updateButton = await page.$('#updateButton');
             await updateButton.click();
-            await navigationPromise;
 
             // Value of the Mood
             await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/finish-page.html');
+            await page.waitForNavigation();
             const localMood = await page.evaluate(() => localStorage.getItem(key));
             expect(localMood).toBe(`{\"rating\":\"${moodList[i]}\",\"comment\":\"\",\"edited\":true}`);
         });
