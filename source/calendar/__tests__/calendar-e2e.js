@@ -4,7 +4,6 @@ describe('Basic user flow for Website', () => {
     //visit the website.
     beforeAll(async () => {
         await page.setDefaultNavigationTimeout(0);
-        jest.useFakeTimers();
         await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/calendar/index.html');
     });
 
