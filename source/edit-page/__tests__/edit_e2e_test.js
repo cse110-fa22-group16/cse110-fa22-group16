@@ -121,4 +121,32 @@ describe('Delete Yes Button Test', () => {
     });
 });
 
+describe('Delete No Button Test', () => {
+    beforeAll(async () => {
+        await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/prompt-page.html');
+        const navigationPromise = page.waitForNavigation({ waitUntil: ['load', 'networkidle2'] });
+        const btn = await page.$$('.feelingsChoices>input+label');
+        await btn[0].click();
+
+        await page.click('button');
+        await navigationPromise;
+    });    
+    it('Check that exit button navigates to calendar page', async () => {
+        // Title of Edit Page Check
+        await page.click('button');
+        const titleEdit = await page.title();
+        expect(titleEdit).toBe('Edit Page');
+
+        // Navigation to the correct edit section
+        await page.click('#editButton');
+        await page.click('#editButton');
+        await page.click('#editButton');
+        await page.click('#editButton');
+
+        // Check the delete no button - it should go back to the edit page    
+        await page.click('#deleteNo');
+        const newTitle = await page.title();
+        expect(newTitle).toBe('Edit Page');
+    });
+});
 
