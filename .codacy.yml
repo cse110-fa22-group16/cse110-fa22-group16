@@ -1,0 +1,15 @@
+---
+exclude_paths:
+  - "admin/**"
+  - "out/**"
+  - "source/calendar/__tests__/*"
+  - "source/calendar/notes.md"
+  - "source/hello-page/__tests__/*"
+  - "source/hello-page/notes/*"
+  - "source/edit-page/__tests__/*"
+  - "source/edit-page/notes.md"
+  - "specs/**"
+  - ".gitignore"
+  - "README.md"
+  - "package-lock.json"
+  - "package.json"

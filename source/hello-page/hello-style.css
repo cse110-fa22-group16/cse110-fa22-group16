@@ -36,16 +36,16 @@ input[type=radio] {
 
 label {
     display: block;
-    width: 80px;
+    width: 6%;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2.7vh;
 }
 
 input + label{
     display: inline-block;
     border-radius: 10px;
 
-    padding: 50px 30px;
+    padding: 3% 2%;
     border: 0;
 
     cursor: pointer;
@@ -53,50 +53,50 @@ input + label{
 
 #terrible + label{
     background: #8E6E5E;
-    box-shadow: #8E6E5E 10px 10px 10px -10px;
+    box-shadow: #8E6E5E 1vh 1vh 1vh -1vh;
     color: #000000;
 }
 
 #bad + label{
     background: #586689;
-    box-shadow: #586689 10px 10px 10px -10px;
+    box-shadow: #586689 1vh 1vh 1vh -1vh;
     color: #000000;
 }
 
 #neutral + label{
     background: #F9DEC9;
-    box-shadow: #F9DEC9 10px 10px 10px -10px;
+    box-shadow: #F9DEC9 1vh 1vh 1vh -1vh;
     color: #000000;
 }
 
 #good + label{
     background: #339989;
-    box-shadow: #339989 10px 10px 10px -10px;
+    box-shadow: #339989 1vh 1vh 1vh -1vh;
     color: #000000;
 }
 
 #great + label{
     background: #D7B4F3;
-    box-shadow: #D7B4F3 10px 10px 10px -10px;
+    box-shadow: #D7B4F3 1vh 1vh 1vh -1vh;
     color: #000000;
 }
 
 textarea {
     display: block;
-    margin-top: 2rem;
+    margin-top: 1.8%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
-    width: 500px;
-    height: 70px;
+    margin-bottom: 1.8%;
+    width: 35%;
+    height: 9vh;
     background: #F4D77266;
     border: none;
     border-radius: 10px;
     resize: none;
-    font-size: 1.5rem;
-    padding: 0.7rem;
+    font-size: 2.5vh;
+    padding: 0.9vh;
 }
 
 .feelingsChoices input[type='radio']:checked+label {
-    border: 3px solid #000000;
+    border: 0.4vh solid #000000;
 }
