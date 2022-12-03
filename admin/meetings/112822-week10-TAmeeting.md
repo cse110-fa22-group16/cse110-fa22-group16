@@ -45,6 +45,7 @@
   - Final interview related
 
 ### Next Meeting:
-  - 11/29 1PM-3PM
-  - Geisel
+  - Tuesday 11/29/22 1PM-3PM
+  - Geisel Library 1st Floor
+  - Topic: Sprint, discuss stretch goals, finish pipeline.
 
