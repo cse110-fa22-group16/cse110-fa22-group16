@@ -1,4 +1,4 @@
-# Sprint 1 Review (Week 8)
+# Sprint 2 Review (Week 8)
 ## Team #16: GitHubbies
 
 ### Achieved

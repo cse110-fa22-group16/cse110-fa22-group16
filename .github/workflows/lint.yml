@@ -53,7 +53,6 @@ jobs:
           git add out/*
           git commit -m "GitHub Documentations" --allow-empty
           git push
-
   linthtml:
     runs-on: ubuntu-latest
     steps:
