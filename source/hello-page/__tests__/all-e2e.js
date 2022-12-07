@@ -13,7 +13,7 @@ describe('Home Page and Prompt Page test', () => {
     // Home Page Test
     beforeAll(async () => {
         await page.setDefaultNavigationTimeout(0);
-        await page.goto(' https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/home-page.html');
+        await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/home-page.html');
     });    
     it('check let\'s go button link to prompt page, if not enter yet', async () => {
         await page.click('button');

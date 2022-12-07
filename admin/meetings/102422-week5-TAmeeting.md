@@ -4,7 +4,7 @@
 - **10/24/22 12:30PM - 1:00PM**
 - **Location: Geisel Library 1st Floor**
 
-Attendance: 
+### Attendance: 
 - [x] Shubham Kumar (TA)
 - [x] Gunwoo Kim (Lead)
 - [x] Abishek Siva (Lead)
@@ -17,12 +17,12 @@ Attendance:
 - [x] Tianyu Chen
 - [x] Hung-I Huang
 
-# Last Week
+### Last Week
 - Project Theme: Balanced, Expandable
 - Brainstorm: Smooth, Clear
 - :)
 
-# Notes:
+### Notes:
 - Pitch: more specific, list of topics, diagrams, design
   - pitch document: leader's feedback
   - work:
@@ -37,7 +37,7 @@ Attendance:
   - Only can use HTML, CSS, and Vanilla JS
   - Github must be used to keep track of all documentation/planning
 
-# To Do:
+### To Do:
 - Pitch: See [here](#Notes)
 - Additional meeting not on weekend
 - Provide document to receive feedbacks
