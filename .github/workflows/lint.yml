@@ -52,7 +52,7 @@ jobs:
           git config user.email github-actions@github.com
           git add out/*
           git commit -m "GitHub Documentations" --allow-empty
-          git push
+          git push origin --force
   linthtml:
     runs-on: ubuntu-latest
     steps:
