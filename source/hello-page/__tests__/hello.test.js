@@ -4,9 +4,11 @@ let month = dateObj.getMonth() + 1;
 let year = dateObj.getFullYear();
 let key = `${year}-${month}-${date}`;
 
+jest.setTimeout(100000);
+
 describe('Test home page', () => {
     beforeAll(async () => {
-        await page.goto(' https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/home-page.html');
+        await page.goto('https://cse110-fa22-group16.github.io/cse110-fa22-group16/source/hello-page/home-page.html');
     });    
     it('check let\'s go button link to prompt page, if not enter yet', async () => {
         await page.click('button');

@@ -56,6 +56,9 @@
     font-size: 2.5vw;
     height: 3.5vw;
     width: 10vw;
+    background: #F4D77266;
+    border: none;
+    border-radius: 10px;
 }
 
 /*Comment*/
@@ -109,6 +112,14 @@
     flex-direction: row;
     margin-top: 1vw;
     gap: 6vw;
+}
+
+#deleteToday{
+    display: none;
+}
+
+#deleteNotToday{
+    display: none;
 }
 
 #deleteChoice button{

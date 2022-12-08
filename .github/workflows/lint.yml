@@ -47,12 +47,13 @@ jobs:
           output_dir: ./out
           front_page: README.md
       - name: Pushing
+        continue-on-error: true
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add out/*
           git commit -m "GitHub Documentations" --allow-empty
-          git push
+          git push origin --force
   linthtml:
     runs-on: ubuntu-latest
     steps:
@@ -85,3 +86,24 @@ jobs:
         run: |
           npm install xo --save-dev
           npx xo source --env=node
+
+  codacy-analysis-cli:
+    name: Codacy Analysis CLI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
+  
+  jest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: jest
+        continue-on-error: true
+        run: |
+          npm install --save-dev jest
+          npm test
