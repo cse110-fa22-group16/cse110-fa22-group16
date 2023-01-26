@@ -4,7 +4,7 @@
 
 ## Team Lead: Gunwoo Kim - [GitHub Profile](https://github.com/Ereasai)
 <img src="./images/gunwoo.jpg" alt="picture of gunwoo" width="200px"/><br>
-Hello! I am a Math-Computer Science major in ERC. I would like to become a software engineer but not work at a big company. I have an interest in music, specifically late romantic music and composition. I am very excited to create something polished with a team which in my experience always went horribly wrong. Hopefully all the scope restrictions and support from TAs help us through.
+Hello! I am a Math-Computer Science major in ERC. I would like to become a software engineer and maybe become a freelancer. I have an interest in music, specifically late romantic music and composition. I am very excited to create something polished with a team which in my experience always went horribly wrong. Hopefully all the scope restrictions and support from TAs help us through.
 
 
 ## Team Lead: Abishek Siva - [GitHub Profile](https://github.com/abi2020)
